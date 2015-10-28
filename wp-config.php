@@ -23,13 +23,13 @@
 define('DB_NAME', 'a56rmgri_crm');
 
 /** MySQL database username */
-define('DB_USER', 'a56rmgri_wellier');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'a;a;1987');
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
-define('DB_HOST', '103.224.22.13');
+define('DB_HOST', '127.0.0.1');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
