@@ -16,7 +16,7 @@
 <div id="header">
 		<div id="title" class="siteName">
 			<a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo('name'); ?>">
-				<?php bloginfo( 'name' ); ?>
+				学评网
 			</a>
 		</div>
 		<nav id="topnav">
