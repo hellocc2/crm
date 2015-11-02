@@ -49,7 +49,7 @@ class Template{
 		$tpl->assign('javascript_url', JAVASCRIPT_URL);//	en(CDN_JAVASCRIPT_URL)
         $tpl->assign('popup_url', POPUP_URL);
 		$tpl->assign('image_url', IMAGE_URL);	
-        $tpl->assign('media', MEDIA_URL);
+        $tpl->assign('temp_url', TEMP_URL);
 		$tpl->assign('image_global_url', IMAGE_GLOBAL_URL);	
 		$tpl->assign('theme_url',ROOT_URL."theme/default");
 		$tpl->assign('themeRoot', THEME);

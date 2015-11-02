@@ -30,7 +30,8 @@ if (!defined('IMAGE_GLOBAL_URL')) define('IMAGE_GLOBAL_URL', ROOT_URL.'ued/image
 if (!defined('CDN_UPLOAD_URL')) define('CDN_UPLOAD_URL', CDN_ROOT);//新图片地址upload/
 if (!defined('CDN_UPLAN_URL')) define('CDN_UPLAN_URL', CDN_ROOT);//新图片地址upload/up(en,fr,···)
 if (!defined('STATICS_OPEN')) define('STATICS_OPEN', 1);//是否开启统计代码显示
-if (!defined('MEDIA_URL'))define('MEDIA_URL', CDN_IMAGE_URL .'media');//模板图片目录的url地址
+if (!defined('TEMP_URL'))define('TEMP_URL', CDN_ROOT .'tpmstp/');//模板样式文件地址
+
 		
 
 //数据缓存根目录
