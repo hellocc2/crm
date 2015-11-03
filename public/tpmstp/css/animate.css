@@ -1096,3 +1096,11 @@
 	backface-visibility: visible !important;
 	animation-name: flipInY;
 }
+
+.container {
+    padding-left: 10px;
+    padding-right: 10px;
+	height: 35px;
+	width: 100%;
+	background-color:#f0f3f4;
+}
