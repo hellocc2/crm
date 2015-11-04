@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-04 15:17:48
+<?php /* Smarty version 2.6.18, created on 2015-11-04 17:24:29
          compiled from index.html */ ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,13 +14,47 @@ css/bootstrap.min.css" type="text/css" />
 </head>
 <body>
 <!--head-->
+<div class="head">
+<div class="container">  
+<div class="row"> 
+	<div class="col col-sm-6">34345</div>
+	<div class="col col-sm-6">
+		<form>
+		<div class="form-group">
+			<label for="search"></label>
+			<input type="text" class="form-control" id="search" placeholder="搜索">
+		</div>
+		</form>
+	</div>
+</div>
+</div>
+</div>
+
+<!--catgory-->
+<div class="catgory">
+<div class="container">  
+<div class="row"> 
+	<ul class="nav nav-tabs">
+	  <li role="presentation" class="active"><a href="#">Home</a></li>
+	  <li role="presentation"><a href="#">Profile</a></li>
+	  <li role="presentation"><a href="#">Messages</a></li>
+	</ul>
+</div>
+</div>
+</div>
+
+<!--main-->
 <div class="container"> 
 <div class="row"> 
 	<div class="col-md-3">
          <h4>第一列</h4>
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
-	<div class="col-md-9">
+	<div class="col-md-6">
+         <h4>第一列</h4>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+	<div class="col-md-3">
          <h4>第一列</h4>
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
@@ -28,5 +62,11 @@ css/bootstrap.min.css" type="text/css" />
 </div>
 
 
+
+
+<script src="<?php echo $this->_tpl_vars['style_url']; ?>
+js/jquery.min.js"></script>
+<script src="<?php echo $this->_tpl_vars['style_url']; ?>
+js/bootstrap.min.js"></script>
 </body>
 </html>

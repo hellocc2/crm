@@ -1,0 +1,11 @@
+.catgory {
+	background-color:#96b97d;
+}
+
+.navfont{
+  	color:#fff;
+}
+.navfont > li > a:hover, .navfont > li > a:focus {
+    color:#666666; 
+}
+
