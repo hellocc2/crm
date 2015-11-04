@@ -12,7 +12,6 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.42857143;
   color: #58666e;
-  background-color: transparent;
 }
 
 *:focus {
@@ -5100,3 +5099,8 @@ a.text-#000000:hover {
     background-color: #7266ba;
   }
 }
+
+#s:before {
+    content: "\f002";
+}
+

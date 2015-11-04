@@ -25,12 +25,12 @@ if (!defined('SESSION_PREFIX')) define('SESSION_PREFIX', md5('sunny_session_'));
 if (!defined('FileUp')) define('FileUp', ROOT_PATH . 'upload');//上传文件目录
 if (!defined('CDN_IMAGE_URL')) define('CDN_IMAGE_URL', CDN_ROOT);//新图片地址image
 if (!defined('CDN_JAVASCRIPT_URL')) define('CDN_JAVASCRIPT_URL', ROOT_URL.'ued/javascript/');//新JS文件地址
-if (!defined('CDN_CSS_URL')) define('CDN_CSS_URL', ROOT_URL.'ued/image/default/css/');//新CSS文件地址
+if (!defined('STYLE_URL')) define('STYLE_URL', CDN_ROOT .'all/');//CSS、JS文件地址
 if (!defined('IMAGE_GLOBAL_URL')) define('IMAGE_GLOBAL_URL', ROOT_URL.'ued/image/default/');//模板公用图片目录的url地址
 if (!defined('CDN_UPLOAD_URL')) define('CDN_UPLOAD_URL', CDN_ROOT);//新图片地址upload/
 if (!defined('CDN_UPLAN_URL')) define('CDN_UPLAN_URL', CDN_ROOT);//新图片地址upload/up(en,fr,···)
 if (!defined('STATICS_OPEN')) define('STATICS_OPEN', 1);//是否开启统计代码显示
-if (!defined('TEMP_URL'))define('TEMP_URL', CDN_ROOT .'tpmstp/');//模板样式文件地址
+if (!defined('TEMP_URL'))define('TEMP_URL', CDN_ROOT .'tpblue/');//模板样式文件地址
 
 		
 
@@ -41,7 +41,7 @@ if (!defined('DATA_CACHE_ROOT_PATH')) define('DATA_CACHE_ROOT_PATH', ROOT_PATH .
  * 调试模式开关.调试模式下会输出所有错误信息
  * @var boolean
  */
-define('DEBUG_MODE',1);
+define('DEBUG_MODE',0);
 /**
  * 调试级别.
  * @var INT 0,输出所有调试信息.<br /> 

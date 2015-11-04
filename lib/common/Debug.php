@@ -102,11 +102,11 @@ class Debug{
        $str = '<style type="text/css">@import url("'.IMAGE_URL.'debug.css");</style>';     
        if(DEBUG_LEVEL == 0 || DEBUG_LEVEL == 2)
        {    
-           $str .= '<div id="milanooDebugFrame">'.self::consumption().self::infoToStr(self::$debugInfo);           
+           $str .= '<div id="DebugFrame">'.self::consumption().self::infoToStr(self::$debugInfo);           
        }   
        else if(DEBUG_LEVEL === 1) 
        {
-           $str .= '<div id="milanooDebugFrame">'.self::consumption();
+           $str .= '<div id="DebugFrame">'.self::consumption();
        } 
        $str .= '</div>';
        echo $str;   

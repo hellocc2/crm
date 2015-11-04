@@ -56,7 +56,7 @@ class Template{
         $tpl->assign('public_url', ROOT_URL."public");
 	            
 		$tpl->assign('statics_open', STATICS_OPEN);		
-		$tpl->assign('cdn_css_url', CDN_CSS_URL);
+		$tpl->assign('style_url', STYLE_URL);
 		$tpl->assign('cdn_javascript_url', CDN_JAVASCRIPT_URL);//
 		$tpl->assign('cdn_base_url', CDN_IMAGE_URL);
 		$tpl->assign('cdn_upload_url', CDN_UPLOAD_URL);
