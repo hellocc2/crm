@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-04 17:24:29
+<?php /* Smarty version 2.6.18, created on 2015-11-05 11:34:49
          compiled from index.html */ ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,15 +17,18 @@ css/bootstrap.min.css" type="text/css" />
 <div class="head">
 <div class="container">  
 <div class="row"> 
-	<div class="col col-sm-6">34345</div>
-	<div class="col col-sm-6">
-		<form>
-		<div class="form-group">
-			<label for="search"></label>
-			<input type="text" class="form-control" id="search" placeholder="搜索">
-		</div>
-		</form>
+	<div class="col-md-6"><img src="<?php echo $this->_tpl_vars['style_url']; ?>
+/img/title.png"/></div>
+	<div class="col-md-6">
+	<form class="form-inline" style="margin-top:28px">
+	<div class="form-group controls">
+		<label for="search" class="sr-only">搜索...</label>
+		<input style="width:400px" type="text" class="form-control" id="search" placeholder="搜索...">
 	</div>
+	<button type="submit" class="btn btn-default">Go!</button>
+	</form>
+	<!-- /form -->
+  </div>
 </div>
 </div>
 </div>
@@ -33,22 +36,32 @@ css/bootstrap.min.css" type="text/css" />
 <!--catgory-->
 <div class="catgory">
 <div class="container">  
-<div class="row"> 
+<div class="row">
+<div class="col-md-12"> 
 	<ul class="nav nav-tabs">
 	  <li role="presentation" class="active"><a href="#">Home</a></li>
 	  <li role="presentation"><a href="#">Profile</a></li>
 	  <li role="presentation"><a href="#">Messages</a></li>
 	</ul>
+</div>	
 </div>
 </div>
 </div>
 
 <!--main-->
+<div class="main" style="margin-top:20px"> 
 <div class="container"> 
 <div class="row"> 
 	<div class="col-md-3">
-         <h4>第一列</h4>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+         <ul class="nav nav-pills nav-stacked">
+		   <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+		</ul>
     </div>
 	<div class="col-md-6">
          <h4>第一列</h4>
@@ -60,7 +73,7 @@ css/bootstrap.min.css" type="text/css" />
     </div>
 </div>
 </div>
-
+</div>
 
 
 
