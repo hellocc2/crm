@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-05 17:32:00
+<?php /* Smarty version 2.6.18, created on 2015-11-05 17:52:57
          compiled from index.html */ ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -95,7 +95,7 @@ css/bootstrap.min.css" type="text/css" />
     </div>
 	<div class="col-md-7" style="background-color:#fff">
 		<div class="progroup">
-		  <div class="progress">
+		  <div class="progress" >
 		  <div class="progress-bar progress-bar-info" role="progressbar" style="width: 60%">
 			<span>泡桐树小学</span>
 		  </div>
