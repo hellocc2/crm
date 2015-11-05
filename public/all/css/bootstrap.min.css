@@ -1354,7 +1354,7 @@ button,input,select,textarea {
 }
 
 a {
-    color: #337ab7;
+    color: #555;
     text-decoration: none
 }
 
@@ -4203,7 +4203,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .nav-tabs>li.active>a,.nav-tabs>li.active>a:focus,.nav-tabs>li.active>a:hover {
     color: #555;
     cursor: default;
-    background-color: #fff;
+    background-color: #f6f4f0;
     border: 1px solid #ddd;
     border-bottom-color: transparent
 }
@@ -5396,7 +5396,7 @@ a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover {
 }
 
 .progress {
-    height: 20px;
+    height: 25px;
     margin-bottom: 20px;
     overflow: hidden;
     background-color: #f5f5f5;
@@ -5409,8 +5409,8 @@ a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover {
     float: left;
     width: 0;
     height: 100%;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 25px;
     color: #fff;
     text-align: center;
     background-color: #337ab7;
@@ -5446,7 +5446,7 @@ a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover {
 }
 
 .progress-bar-info {
-    background-color: #5bc0de
+    background-color: #96b97d
 }
 
 .progress-striped .progress-bar-info {
