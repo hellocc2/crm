@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-05 17:18:31
+<?php /* Smarty version 2.6.18, created on 2015-11-05 17:32:00
          compiled from index.html */ ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -96,33 +96,31 @@ css/bootstrap.min.css" type="text/css" />
 	<div class="col-md-7" style="background-color:#fff">
 		<div class="progroup">
 		  <div class="progress">
-		  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+		  <div class="progress-bar progress-bar-info" role="progressbar" style="width: 60%">
 			<span>泡桐树小学</span>
 		  </div>
-		</div>
-		
-		
+		  </div>
 		</div>
 		<div class="progroup">
 		  <div class="progress">
-		  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+		  <div class="progress-bar progress-bar-info" role="progressbar" style="width: 40%">
 			<span>泡桐树小学</span>
 		  </div>
-		</div>
+		  </div>
 		</div>
 		<div class="progroup">
 		  <div class="progress">
-		  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+		  <div class="progress-bar progress-bar-info" role="progressbar" style="width: 20%">
 			<span>泡桐树小学</span>
 		  </div>
-		</div>
+		  </div>
 		</div>
 		<div class="progroup">
 		  <div class="progress">
-		  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+		  <div class="progress-bar progress-bar-info" role="progressbar" style="width: 10%">
 			<span>泡桐树小学</span>
 		  </div>
-		</div>
+		  </div>
 		</div>
 		
     </div>
