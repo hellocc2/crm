@@ -4145,7 +4145,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .nav>li>a {
     position: relative;
     display: block;
-    padding: 10px 15px
+    padding: 6px 15px
 }
 
 .nav>li>a:focus,.nav>li>a:hover {
@@ -4180,10 +4180,6 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
     max-width: none
 }
 
-.nav-tabs {
-    border-bottom: 1px solid #ddd
-}
-
 .nav-tabs>li {
     float: left;
     margin-bottom: -1px
@@ -4193,11 +4189,12 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
     margin-right: 2px;
     line-height: 1.42857143;
     border: 1px solid transparent;
-    border-radius: 4px 4px 0 0
+    border-radius: 4px 4px 0 0;
+	color:#fff;
 }
 
 .nav-tabs>li>a:hover {
-    border-color: #eee #eee #ddd
+	color:#555;
 }
 
 .nav-tabs>li.active>a,.nav-tabs>li.active>a:focus,.nav-tabs>li.active>a:hover {
@@ -4272,7 +4269,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 
 .nav-pills>li.active>a,.nav-pills>li.active>a:focus,.nav-pills>li.active>a:hover {
     color: #fff;
-    background-color: #337ab7
+    background-color:#64854c;
 }
 
 .nav-stacked>li {
@@ -5399,7 +5396,7 @@ a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover {
     height: 25px;
     margin-bottom: 5px;
     overflow: hidden;
-    background-color: #f5f5f5;
+    background-color: #fff;
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
     box-shadow: inset 0 1px 2px rgba(0,0,0,.1)
@@ -5446,7 +5443,7 @@ a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover {
 }
 
 .progress-bar-info {
-    background-color: #96b97d
+    background-color:#808000
 }
 
 .progress-striped .progress-bar-info {
@@ -5456,7 +5453,7 @@ a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover {
 }
 
 .progress-bar-warning {
-    background-color: #f0ad4e
+    background-color:#BDB76B
 }
 
 .progress-striped .progress-bar-warning {
