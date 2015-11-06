@@ -5534,7 +5534,7 @@ a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover {
     padding: 10px 15px;
     margin-bottom: -1px;
     background-color: #fff;
-    border: 1px solid #ddd
+    
 }
 
 .list-group-item:first-child {
