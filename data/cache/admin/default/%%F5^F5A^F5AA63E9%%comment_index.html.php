@@ -1,5 +1,13 @@
-{-include file="header2.html"-}
-<link rel="stylesheet" type="text/css" href="{-$style_url-}css/story.css?r={-$REVISION-}" /> 
+<?php /* Smarty version 2.6.18, created on 2015-11-10 16:36:28
+         compiled from comment_index.html */ ?>
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "header2.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+<link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['style_url']; ?>
+css/story.css?r=<?php echo $this->_tpl_vars['REVISION']; ?>
+" /> 
 
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
   <div class="container">
@@ -178,11 +186,15 @@
    	</div><!--/col-8-->
 	
 	<div class="col-md-4">
-	<a href="?module=">发表言论</a>
+	
 	</div><!--/col-4-->
 	
   </div>
 </div>
 
-{-include file="footer.html"-}
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "footer.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
 </html>

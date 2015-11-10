@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-09 15:48:16
+<?php /* Smarty version 2.6.18, created on 2015-11-09 15:53:41
          compiled from vote_index.html */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "header.html", 'smarty_include_vars' => array()));
@@ -15,7 +15,7 @@ css/star.css?r=<?php echo $this->_tpl_vars['REVISION']; ?>
 <div class="col-md-6"> 
 	<div class="panel panel-default">
 	   <div class="panel-heading">
-		  泡桐树小学
+		  泡桐树小学<a href="?module=comment&action=index">(98977条评论)</a>
 	   </div>
 	   <div class="panel-body">
 		 <ul id="star2" class="list-group">
