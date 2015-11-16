@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-10 16:36:48
+<?php /* Smarty version 2.6.18, created on 2015-11-16 20:53:33
          compiled from header.html */ ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,9 +41,16 @@ css/style.css" type="text/css" />
 <div class="row">
 <div class="col-md-12"> 
 	<ul class="nav nav-tabs">
-	  <li class="active"><a href="#">Home</a></li>
-	  <li><a href="#">Profile</a></li>
-	  <li><a href="#">Messages</a></li>
+	  <li class="active"><a href="#">主页</a></li>
+	   <?php if ($this->_tpl_vars['res_nav']): ?>
+	  <?php $_from = $this->_tpl_vars['res_nav']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['nav']):
+?>
+	   <li><a href="<?php echo $this->_tpl_vars['nav']['nav_cateid']; ?>
+"><?php echo $this->_tpl_vars['nav']['nav_name']; ?>
+</a></li>
+	  <?php endforeach; endif; unset($_from); ?>
+	  <?php endif; ?>
 	</ul>
 </div>	
 </div>

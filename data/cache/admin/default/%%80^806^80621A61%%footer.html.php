@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-06 15:33:59
+<?php /* Smarty version 2.6.18, created on 2015-11-16 20:49:55
          compiled from footer.html */ ?>
 <div class="foot">
 <div class="container "> 

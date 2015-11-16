@@ -36,9 +36,12 @@
 <div class="row">
 <div class="col-md-12"> 
 	<ul class="nav nav-tabs">
-	  <li class="active"><a href="#">Home</a></li>
-	  <li><a href="#">Profile</a></li>
-	  <li><a href="#">Messages</a></li>
+	  <li class="active"><a href="#">主页</a></li>
+	   {-if $res_nav-}
+	  {-foreach from=$res_nav item=nav-}
+	   <li><a href="{-$nav.nav_cateid-}">{-$nav.nav_name-}</a></li>
+	  {-/foreach-}
+	  {-/if-}
 	</ul>
 </div>	
 </div>

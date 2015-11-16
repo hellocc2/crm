@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-06 15:43:13
+<?php /* Smarty version 2.6.18, created on 2015-11-16 21:42:34
          compiled from index.html */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "header.html", 'smarty_include_vars' => array()));
@@ -11,7 +11,8 @@ unset($_smarty_tpl_vars);
 <div class="row"> 
 	<div class="col-md-2">
 		<ul class="nav nav-pills nav-stacked">
-		   <li class="active"><a href="#">环境</a></li>
+		  <li class="active"><a href=''>首页</a></li>
+	
 		   <li><a href="#">满意度</a></li>
 		   <li><a href="#">iOS</a></li>
 		   <li><a href="#">VB.Net</a></li>
