@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-17 15:02:47
+<?php /* Smarty version 2.6.18, created on 2015-11-17 15:45:02
          compiled from index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'rewrite', 'index.html', 13, false),)), $this); ?>
@@ -41,12 +41,14 @@ unset($_smarty_tpl_vars);
 		<?php $_from = $this->_tpl_vars['res_school']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['school']):
 ?>
+		<?php $this->assign('schoolid', $this->_tpl_vars['school']['school_id']); ?>
 		<div class="progroup">
 		  <div class="progress" >
 		  <div class="progress-bar progress-bar-info" role="progressbar" style="width:<?php echo $this->_tpl_vars['school']['score']; ?>
 %">
 			<span><?php echo $this->_tpl_vars['school']['school_name']; ?>
-<a href="?module=vote&action=Index">(<?php echo $this->_tpl_vars['school']['membernum']; ?>
+<a href='<?php echo smarty_function_rewrite(array('url' => "?module=vote&action=index&id=".($this->_tpl_vars['catid'])."&pid=".($this->_tpl_vars['schoolid'])), $this);?>
+'>(<?php echo $this->_tpl_vars['school']['membernum']; ?>
 人投票)</a></span>
 		  </div>
 		  </div>

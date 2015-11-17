@@ -25,10 +25,11 @@
 		<div class="panel-body">
 		{-if $res_school-}
 		{-foreach from=$res_school item=school-}
+		{-assign var=schoolid value=$school.school_id-}
 		<div class="progroup">
 		  <div class="progress" >
 		  <div class="progress-bar progress-bar-info" role="progressbar" style="width:{-$school.score-}%">
-			<span>{-$school.school_name-}<a href="?module=vote&action=Index">({-$school.membernum-}人投票)</a></span>
+			<span>{-$school.school_name-}<a href='{-rewrite url="?module=vote&action=index&id=$catid&pid=$schoolid"-}'>({-$school.membernum-}人投票)</a></span>
 		  </div>
 		  </div>
 		</div>

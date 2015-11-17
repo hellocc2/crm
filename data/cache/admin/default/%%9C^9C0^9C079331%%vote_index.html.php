@@ -1,7 +1,9 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-16 20:50:00
+<?php /* Smarty version 2.6.18, created on 2015-11-17 15:51:58
          compiled from vote_index.html */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('function', 'rewrite', 'vote_index.html', 10, false),)), $this); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
-$this->_smarty_include(array('smarty_include_tpl_file' => "header.html", 'smarty_include_vars' => array()));
+$this->_smarty_include(array('smarty_include_tpl_file' => "header2.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
@@ -15,7 +17,8 @@ css/star.css?r=<?php echo $this->_tpl_vars['REVISION']; ?>
 <div class="col-md-6"> 
 	<div class="panel panel-default">
 	   <div class="panel-heading">
-		  泡桐树小学<a href="?module=comment&action=index">(98977条评论)</a>
+		  泡桐树小学<a href='<?php echo smarty_function_rewrite(array('url' => "?module=comment&action=index&id=".($this->_tpl_vars['catid'])."&sid=".($this->_tpl_vars['sid'])), $this);?>
+'>(98977条评论)</a>
 	   </div>
 	   <div class="panel-body">
 		 <ul id="star2" class="list-group">

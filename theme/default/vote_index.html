@@ -1,4 +1,4 @@
-{-include file="header.html"-}
+{-include file="header2.html"-}
 <link rel="stylesheet" type="text/css" href="{-$style_url-}css/star.css?r={-$REVISION-}" /> 
 <!--main-->
 <div class="main">
@@ -7,7 +7,7 @@
 <div class="col-md-6"> 
 	<div class="panel panel-default">
 	   <div class="panel-heading">
-		  泡桐树小学<a href="?module=comment&action=index">(98977条评论)</a>
+		  泡桐树小学<a href='{-rewrite url="?module=comment&action=index&id=$catid&sid=$sid"-}'>(98977条评论)</a>
 	   </div>
 	   <div class="panel-body">
 		 <ul id="star2" class="list-group">
