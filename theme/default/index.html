@@ -1,74 +1,55 @@
-{-include file="header.html"-}
+{-include file="header2.html"-}
 <!--main-->
-<div class="main"> 
 <div class="container "> 
 <div class="row"> 
 	<div class="col-md-2">
-		<ul class="nav nav-pills nav-stacked">
-		  <li class="active"><a href=''>首页</a></li>
-	
-		   <li><a href="#">满意度</a></li>
-		   <li><a href="#">iOS</a></li>
-		   <li><a href="#">VB.Net</a></li>
-		   <li><a href="#">Java</a></li>
-		   <li><a href="#">PHP</a></li>
-		</ul>
-		<!--<div class="panel-group" id="accordion">
-			<div class="panel-heading">
-			  <h5 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion" 
-				  href="#collapse2">
-				  第 2 部分
-				</a>
-			  </h5>
-			</div>
-			<div id="collapse2" class="panel-collapse collapse">
-			  <ul class="list-group">
-				  <li class="list-group-item">Bootply</li>
-				  <li class="list-group-item">One itmus ac facilin</li>
-				  <li class="list-group-item">Second eros</li>
-				</ul>
-			</div>
-		  </div>
-	
-		</div>-->
+		<div class="panel">
+		<div class="panel-body">
+			<ul class="nav nav-pills nav-stacked">
+			{-if $res_option-}
+			{-foreach from=$res_option item=option-}
+			{-assign var=sid value=$option.satisfy_id-}
+			{-if $optionid==$sid-}
+			 <li class="active"><a href='{-rewrite url="?module=category&action=index&id=$catid&sid=$sid"-}'>{-$option.satisfy_name-}</a></li>
+			{-else-}
+			 <li><a href='{-rewrite url="?module=category&action=index&id=$catid&sid=$sid"-}'>{-$option.satisfy_name-}</a></li>
+			{-/if-}
+			{-/foreach-}
+			{-/if-}
+			</ul>
+		</div>
+		</div>	
     </div>
-	<div class="col-md-6" >
+	<div class="col-md-7" >
+		<div class="panel">
+		<div class="panel-body">
+		{-if $res_school-}
+		{-foreach from=$res_school item=school-}
 		<div class="progroup">
 		  <div class="progress" >
-		  <div class="progress-bar progress-bar-info" role="progressbar" style="width: 60%">
-			<span>泡桐树小学</span>
+		  <div class="progress-bar progress-bar-info" role="progressbar" style="width:{-$school.score-}%">
+			<span>{-$school.school_name-}<a href="?module=vote&action=Index">({-$school.membernum-}人投票)</a></span>
 		  </div>
 		  </div>
 		</div>
-		
-		<div class="progroup">
-		  <div class="progress">
-		  <div class="progress-bar progress-bar-warning" role="progressbar" style="width: 40%">
-			<span>泡桐树小学</span>
-		  </div>
-		  </div>
+		{-/foreach-}
+		{-/if-}
+	
+		</div>
 		</div>		
     </div>
-	<div class="col-md-2">
-        <div class="progroup">
-		  <div class="progress" >
-			<a href="?module=vote&action=Index">投票：(52468人)</a>
-		  </div>
-		</div> 
-		<div class="progroup">
-		  <div class="progress" >
-			<a>投票：(52468人)</a>
-		  </div>
-		</div>
-    </div>
-	<div class="col-md-2">
+
+	<div class="col-md-3">
+	<div class="panel">
+	<div class="panel-body">
 		<a>最新评论</a>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 	</div>
+	</div>	
+	</div>
 </div>
 </div>
-</div>
+
 
 {-include file="footer.html"-}
 </html>

@@ -3,7 +3,7 @@ namespace Model;
 /**
  * 导航菜单
  */
-class Nav extends \Model\Base{
+class School extends \Model\Base{
 	private $db;
 	const PAGENUM =20;
 
@@ -12,23 +12,23 @@ class Nav extends \Model\Base{
 	}
 	
 	/**
-	 * 获取导航
+	 * 获取学校打分
 	 */  
-	public function selectNav($data) {
+	public function selectSchool($data) {
     	$result='';
 		
-		$where[]="WHERE n.nav_status=1";
+		$where[]="WHERE s.school_state=1";
 		if(!empty($data)){
-			if(!empty($data['nav_status'])){
-				$where[]="n.nav_status=".$data['nav_status'];
+			if(!empty($data['school_option'])){
+				$where[]="s.school_option=".$data['school_option'];
 			}
 		}
 		
 		$where=implode(' AND ', $where);
 		
-		$sql = "SELECT   n.nav_name,n.nav_cateid	
-				FROM crm_nav n  
-				{$where} ORDER BY n.orderid";
+		$sql = "SELECT   s.*,AVG(s.school_score)*10 AS score,COUNT(s.memberid) AS membernum	
+				FROM crm_school s  
+				{$where} GROUP BY s.school_name ORDER BY s.school_score";
 		//echo $sql;exit;
 		$query	= $this->db->Execute($sql);
 		
@@ -51,7 +51,7 @@ class Nav extends \Model\Base{
 			$roles=array();
 			while ( ! $rs->EOF ) {
 				$row = $rs -> fields;
-	            $result['nav'][]=$row;
+			    $result['school'][]=$row;
 				$rs->MoveNext ();
 			}
 		}

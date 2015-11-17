@@ -1,80 +1,74 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-16 21:42:34
+<?php /* Smarty version 2.6.18, created on 2015-11-17 15:02:47
          compiled from index.html */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('function', 'rewrite', 'index.html', 13, false),)), $this); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
-$this->_smarty_include(array('smarty_include_tpl_file' => "header.html", 'smarty_include_vars' => array()));
+$this->_smarty_include(array('smarty_include_tpl_file' => "header2.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
 <!--main-->
-<div class="main"> 
 <div class="container "> 
 <div class="row"> 
 	<div class="col-md-2">
-		<ul class="nav nav-pills nav-stacked">
-		  <li class="active"><a href=''>首页</a></li>
-	
-		   <li><a href="#">满意度</a></li>
-		   <li><a href="#">iOS</a></li>
-		   <li><a href="#">VB.Net</a></li>
-		   <li><a href="#">Java</a></li>
-		   <li><a href="#">PHP</a></li>
-		</ul>
-		<!--<div class="panel-group" id="accordion">
-			<div class="panel-heading">
-			  <h5 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion" 
-				  href="#collapse2">
-				  第 2 部分
-				</a>
-			  </h5>
-			</div>
-			<div id="collapse2" class="panel-collapse collapse">
-			  <ul class="list-group">
-				  <li class="list-group-item">Bootply</li>
-				  <li class="list-group-item">One itmus ac facilin</li>
-				  <li class="list-group-item">Second eros</li>
-				</ul>
-			</div>
-		  </div>
-	
-		</div>-->
+		<div class="panel">
+		<div class="panel-body">
+			<ul class="nav nav-pills nav-stacked">
+			<?php if ($this->_tpl_vars['res_option']): ?>
+			<?php $_from = $this->_tpl_vars['res_option']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['option']):
+?>
+			<?php $this->assign('sid', $this->_tpl_vars['option']['satisfy_id']); ?>
+			<?php if ($this->_tpl_vars['optionid'] == $this->_tpl_vars['sid']): ?>
+			 <li class="active"><a href='<?php echo smarty_function_rewrite(array('url' => "?module=category&action=index&id=".($this->_tpl_vars['catid'])."&sid=".($this->_tpl_vars['sid'])), $this);?>
+'><?php echo $this->_tpl_vars['option']['satisfy_name']; ?>
+</a></li>
+			<?php else: ?>
+			 <li><a href='<?php echo smarty_function_rewrite(array('url' => "?module=category&action=index&id=".($this->_tpl_vars['catid'])."&sid=".($this->_tpl_vars['sid'])), $this);?>
+'><?php echo $this->_tpl_vars['option']['satisfy_name']; ?>
+</a></li>
+			<?php endif; ?>
+			<?php endforeach; endif; unset($_from); ?>
+			<?php endif; ?>
+			</ul>
+		</div>
+		</div>	
     </div>
-	<div class="col-md-6" >
+	<div class="col-md-7" >
+		<div class="panel">
+		<div class="panel-body">
+		<?php if ($this->_tpl_vars['res_school']): ?>
+		<?php $_from = $this->_tpl_vars['res_school']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['school']):
+?>
 		<div class="progroup">
 		  <div class="progress" >
-		  <div class="progress-bar progress-bar-info" role="progressbar" style="width: 60%">
-			<span>泡桐树小学</span>
+		  <div class="progress-bar progress-bar-info" role="progressbar" style="width:<?php echo $this->_tpl_vars['school']['score']; ?>
+%">
+			<span><?php echo $this->_tpl_vars['school']['school_name']; ?>
+<a href="?module=vote&action=Index">(<?php echo $this->_tpl_vars['school']['membernum']; ?>
+人投票)</a></span>
 		  </div>
 		  </div>
 		</div>
-		
-		<div class="progroup">
-		  <div class="progress">
-		  <div class="progress-bar progress-bar-warning" role="progressbar" style="width: 40%">
-			<span>泡桐树小学</span>
-		  </div>
-		  </div>
+		<?php endforeach; endif; unset($_from); ?>
+		<?php endif; ?>
+	
+		</div>
 		</div>		
     </div>
-	<div class="col-md-2">
-        <div class="progroup">
-		  <div class="progress" >
-			<a href="?module=vote&action=Index">投票：(52468人)</a>
-		  </div>
-		</div> 
-		<div class="progroup">
-		  <div class="progress" >
-			<a>投票：(52468人)</a>
-		  </div>
-		</div>
-    </div>
-	<div class="col-md-2">
+
+	<div class="col-md-3">
+	<div class="panel">
+	<div class="panel-body">
 		<a>最新评论</a>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 	</div>
+	</div>	
+	</div>
 </div>
 </div>
-</div>
+
 
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "footer.html", 'smarty_include_vars' => array()));

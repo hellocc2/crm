@@ -1,5 +1,5 @@
 <?php
-namespace Module\Index;
+namespace Module\Category;
 use Helper\RequestUtil as R;
 
 class Index extends \Lib\common\Application {

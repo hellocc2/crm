@@ -8,9 +8,6 @@ function smarty_function_html_headnav($params, &$smarty)
 {
     $html='';
 	$html='<div class="container">
-    <div class="navbar-header">
-       <a href="'.rew::rewrite(array('url'=>'?module=index&action=index','isxs'=>'no')).'" class="navbar-brand">主页</a>
-    </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">';
 	
@@ -22,8 +19,8 @@ function smarty_function_html_headnav($params, &$smarty)
 	$res_nav=$nav->selectNav($data);
 	
 	  
-	if(!empty($res_nav)){
-		foreach($res_nav as $nav){
+	if(!empty($res_nav['nav'])){
+		foreach($res_nav['nav'] as $nav){
 				$url=rew::rewrite(array('url'=>'?module=catgory&action=index&id='.$nav['nav_cateid'],'isxs'=>'no'));
 				$html.='<li><a href='.$url.'>'.$nav['nav_name'].'</a></li>';
 			
