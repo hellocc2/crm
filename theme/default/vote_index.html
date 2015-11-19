@@ -7,46 +7,27 @@
 <div class="col-md-6"> 
 	<div class="panel panel-default">
 	   <div class="panel-heading">
-		  泡桐树小学<a href='{-rewrite url="?module=comment&action=index&id=$catid&sid=$sid"-}'>(98977条评论)</a>
+		 {-$res_school.0.school_name-}<a href='{-rewrite url="?module=comment&action=index&id=$catid&sid=$sid"-}'>(98977条评论)</a>
 	   </div>
-	   <div class="panel-body">
-		 <ul id="star2" class="list-group">
-		 <li class="list-group-item">
-			<strong>环境</strong>
-			<div>
-			<input name="1" type="button" title="1分"/>
-			<input name="2" type="button" />
-			<input name="3" type="button" />
-			<input name="4" type="button" />
-			<input name="5" type="button" />
-			<input name="6" type="button" />
-			<input name="7" type="button" />
-			<input name="8" type="button" />
-			<input name="9" type="button" />
-			<input name="10" type="button" />
-			<span id="starValue2"><b><font size="5" color="#fd7d28">3</font></b>分</span>
-			(659897人)
+	   <!--panel-->
+			<div class="panel">
+			<div class="panel-body">
+			{-if $res_school-}
+			{-foreach from=$res_school item=school-}
+			{-assign var=schoolid value=$school.school_id-}
+			<div class="progroup">
+			  <div class="progress" >
+			  <div class="progress-bar progress-bar-info" role="progressbar" style="width:{-$school.score-}%">
+				<span>{-$school.satisfy_name-}<a href='{-rewrite url="?module=vote&action=index&id=$catid&pid=$schoolid"-}'>({-$school.membernum-}人投票)</a></span>
+			  </div>
+			  </div>
 			</div>
-			</li>
-		 <li class="list-group-item">
-			<strong>素质</strong>
-			<div>
-			<input name="1" type="button" title="1分"/>
-			<input name="2" type="button" />
-			<input name="3" type="button" />
-			<input name="4" type="button" />
-			<input name="5" type="button" />
-			<input name="6" type="button" />
-			<input name="7" type="button" />
-			<input name="8" type="button" />
-			<input name="9" type="button" />
-			<input name="10" type="button" />
-			<span id="starValue2"><b><font size="5" color="#fd7d28">3</font></b>分</span>
-			(659897人)
+			{-/foreach-}
+			{-/if-}
+		
 			</div>
-			</li>
-		</ul>
-	   </div>
+			</div>
+		<!--panel end-->
 	</div>
 </div>
 <div class="col-md-6"> 

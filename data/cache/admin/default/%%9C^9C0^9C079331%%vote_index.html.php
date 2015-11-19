@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-17 15:51:58
+<?php /* Smarty version 2.6.18, created on 2015-11-19 15:34:49
          compiled from vote_index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'rewrite', 'vote_index.html', 10, false),)), $this); ?>
@@ -17,47 +17,35 @@ css/star.css?r=<?php echo $this->_tpl_vars['REVISION']; ?>
 <div class="col-md-6"> 
 	<div class="panel panel-default">
 	   <div class="panel-heading">
-		  泡桐树小学<a href='<?php echo smarty_function_rewrite(array('url' => "?module=comment&action=index&id=".($this->_tpl_vars['catid'])."&sid=".($this->_tpl_vars['sid'])), $this);?>
+		 <?php echo $this->_tpl_vars['res_school']['0']['school_name']; ?>
+<a href='<?php echo smarty_function_rewrite(array('url' => "?module=comment&action=index&id=".($this->_tpl_vars['catid'])."&sid=".($this->_tpl_vars['sid'])), $this);?>
 '>(98977条评论)</a>
 	   </div>
-	   <div class="panel-body">
-		 <ul id="star2" class="list-group">
-		 <li class="list-group-item">
-			<strong>环境</strong>
-			<div>
-			<input name="1" type="button" title="1分"/>
-			<input name="2" type="button" />
-			<input name="3" type="button" />
-			<input name="4" type="button" />
-			<input name="5" type="button" />
-			<input name="6" type="button" />
-			<input name="7" type="button" />
-			<input name="8" type="button" />
-			<input name="9" type="button" />
-			<input name="10" type="button" />
-			<span id="starValue2"><b><font size="5" color="#fd7d28">3</font></b>分</span>
-			(659897人)
+	   <!--panel-->
+			<div class="panel">
+			<div class="panel-body">
+			<?php if ($this->_tpl_vars['res_school']): ?>
+			<?php $_from = $this->_tpl_vars['res_school']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['school']):
+?>
+			<?php $this->assign('schoolid', $this->_tpl_vars['school']['school_id']); ?>
+			<div class="progroup">
+			  <div class="progress" >
+			  <div class="progress-bar progress-bar-info" role="progressbar" style="width:<?php echo $this->_tpl_vars['school']['score']; ?>
+%">
+				<span><?php echo $this->_tpl_vars['school']['satisfy_name']; ?>
+<a href='<?php echo smarty_function_rewrite(array('url' => "?module=vote&action=index&id=".($this->_tpl_vars['catid'])."&pid=".($this->_tpl_vars['schoolid'])), $this);?>
+'>(<?php echo $this->_tpl_vars['school']['membernum']; ?>
+人投票)</a></span>
+			  </div>
+			  </div>
 			</div>
-			</li>
-		 <li class="list-group-item">
-			<strong>素质</strong>
-			<div>
-			<input name="1" type="button" title="1分"/>
-			<input name="2" type="button" />
-			<input name="3" type="button" />
-			<input name="4" type="button" />
-			<input name="5" type="button" />
-			<input name="6" type="button" />
-			<input name="7" type="button" />
-			<input name="8" type="button" />
-			<input name="9" type="button" />
-			<input name="10" type="button" />
-			<span id="starValue2"><b><font size="5" color="#fd7d28">3</font></b>分</span>
-			(659897人)
+			<?php endforeach; endif; unset($_from); ?>
+			<?php endif; ?>
+		
 			</div>
-			</li>
-		</ul>
-	   </div>
+			</div>
+		<!--panel end-->
 	</div>
 </div>
 <div class="col-md-6"> 

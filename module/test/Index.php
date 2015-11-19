@@ -5,6 +5,9 @@ use Helper\CheckLogin as CheckLogin;
 
 class Index extends \Lib\common\Application {
 	public function __construct() {
+		self::insert('E:\www\test.txt',115,'我是一些新内容,我将被写入文档里面.');
+		exit;
+		
 		$tpl = \Lib\common\Template::getSmarty ();
         $lang=array('en-uk','de-ge','es-sp','fr-fr','it-it','ja-jp','pt-pt','ru-ru'); 
 		$filepath = 'E:\www\ued_item\lang\en-uk\Lang.php';
@@ -64,4 +67,21 @@ class Index extends \Lib\common\Application {
         
 
 	}
+	
+	public function insert($file,$line,$txt){
+		
+		 if(!$fileContent = @file($file)) exit('文件不存在');
+		$lines       = count($fileContent);
+		if($line >= $lines) $line = $lines;
+		$fileContent[$line].='\r\n'.$txt;
+		$newContent = '';
+		foreach($fileContent as $v){
+			$newContent.= $v;
+		}
+		if(!file_put_contents($file,$newContent)) exit('无法写入数据');
+		echo '已经将' . $txt . '写入文档' . $file;
+		
+	}
+	
+	
 }

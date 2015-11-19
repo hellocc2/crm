@@ -12,7 +12,107 @@ class School extends \Model\Base{
 	}
 	
 	/**
-	 * 获取学校打分
+	 * 获取学校评论信息
+	 */  
+	public function selectSchoolComment($data) {
+    	$result='';
+		
+		$where[]="WHERE s.school_comment_state=1";
+		if(!empty($data)){
+			if(!empty($data['school_id'])){
+				$where[]="s.school_id=".$data['school_id'];
+			}
+		}
+		
+		$where=implode(' AND ', $where);
+		
+		$sql = "SELECT COUNT(c.id) AS comnum	
+				FROM crm_school_comment c
+				{$where}";
+		//echo $sql;exit;
+		$query	= $this->db->Execute($sql);
+		
+		$pageSize=12;
+		$page=1;
+		if(!empty($data['pageSize'])){
+			$pageSize=$data['pageSize'];
+		}
+		if(!empty($data['page'])){
+			$page=$data['page'];
+		}		
+		$last_num= $pageSize* ($page-1);
+		$num	= $query->MaxRecordCount($query);
+		
+		if($last_num>=$num) $last_num=(ceil( $num / $pageSize )-1) * $pageSize;
+		$rs= $this->db->SelectLimit($sql,$pageSize,$last_num);
+		$row = array ();
+		$result = array ();
+		if ($rs->RecordCount ()) {
+			$roles=array();
+			while ( ! $rs->EOF ) {
+				$row = $rs -> fields;
+			    $result['school'][]=$row;
+				$rs->MoveNext ();
+			}
+		}
+		$result['totalCount']=$num;
+			
+        return $result;
+    }
+	
+	
+	
+	/**
+	 * 获取学校各选项分
+	 */  
+	public function selectSchoolOption($data) {
+    	$result='';
+		
+		$where[]="WHERE s.school_state=1";
+		if(!empty($data)){
+			if(!empty($data['school_id'])){
+				$where[]="s.school_id=".$data['school_id'];
+			}
+		}
+		
+		$where=implode(' AND ', $where);
+		
+		$sql = "SELECT c.satisfy_name,s.school_name,s.school_option,AVG(s.school_score)*10 AS score,COUNT(s.memberid) AS membernum	
+				FROM crm_school s  LEFT JOIN crm_satisfy c ON s.school_option=c.satisfy_id
+				{$where} GROUP BY s.school_option ORDER BY s.school_option";
+		//echo $sql;exit;
+		$query	= $this->db->Execute($sql);
+		
+		$pageSize=12;
+		$page=1;
+		if(!empty($data['pageSize'])){
+			$pageSize=$data['pageSize'];
+		}
+		if(!empty($data['page'])){
+			$page=$data['page'];
+		}		
+		$last_num= $pageSize* ($page-1);
+		$num	= $query->MaxRecordCount($query);
+		
+		if($last_num>=$num) $last_num=(ceil( $num / $pageSize )-1) * $pageSize;
+		$rs= $this->db->SelectLimit($sql,$pageSize,$last_num);
+		$row = array ();
+		$result = array ();
+		if ($rs->RecordCount ()) {
+			$roles=array();
+			while ( ! $rs->EOF ) {
+				$row = $rs -> fields;
+			    $result['school'][]=$row;
+				$rs->MoveNext ();
+			}
+		}
+		$result['totalCount']=$num;
+			
+        return $result;
+    }
+	
+	/**
+	 * 获取学校打分列表
 	 */  
 	public function selectSchool($data) {
     	$result='';
@@ -21,6 +121,9 @@ class School extends \Model\Base{
 		if(!empty($data)){
 			if(!empty($data['school_option'])){
 				$where[]="s.school_option=".$data['school_option'];
+			}
+			if(!empty($data['school_id'])){
+				$where[]="s.school_id=".$data['school_id'];
 			}
 		}
 		
