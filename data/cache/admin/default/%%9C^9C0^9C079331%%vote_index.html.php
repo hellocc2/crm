@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-19 15:34:49
+<?php /* Smarty version 2.6.18, created on 2015-11-21 20:50:41
          compiled from vote_index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'rewrite', 'vote_index.html', 10, false),)), $this); ?>
@@ -54,9 +54,15 @@ css/star.css?r=<?php echo $this->_tpl_vars['REVISION']; ?>
 		  泡桐树小学
 	   </div>
 	   <div class="panel-body">
+		<?php if ($this->_tpl_vars['res_school']): ?>
+		<?php $_from = $this->_tpl_vars['res_school']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['school']):
+?>
+		<?php $this->assign('satisfy_id', $this->_tpl_vars['school']['satisfy_id']); ?>
 		 <ul id="star" class="list-group">
 		 <li class="list-group-item">
-			<strong>我的评分</strong>
+			<strong><?php echo $this->_tpl_vars['school']['satisfy_name']; ?>
+</strong>
 			<div>
 			<input name="1" type="button" />
 			<input name="2" type="button" />
@@ -68,23 +74,15 @@ css/star.css?r=<?php echo $this->_tpl_vars['REVISION']; ?>
 			<input name="8" type="button" />
 			<input name="9" type="button" />
 			<input name="10" type="button" />
-			<span id="starValue"><b><font size="5" color="#fd7d28">0</font></b>分</span></li>
-		<li class="list-group-item">
-			<strong>我的评分</strong>
-			<div>
-			<input name="1" type="button" />
-			<input name="2" type="button" />
-			<input name="3" type="button" />
-			<input name="4" type="button" />
-			<input name="5" type="button" />
-			<input name="6" type="button" />
-			<input name="7" type="button" />
-			<input name="8" type="button" />
-			<input name="9" type="button" />
-			<input name="10" type="button" />
-			<span id="starValue"><b><font size="5" color="#fd7d28">0</font></b>分</span></li>
+			<span id="starValue"><b><font size="5" color="#fd7d28">0</font></b>分</span>
 			</div>
+		</li>
 		</ul>
+		<?php endforeach; endif; unset($_from); ?>
+		<?php endif; ?>
+		
+		</div>
+		
 	   </div>
 	</div>
 </div>	

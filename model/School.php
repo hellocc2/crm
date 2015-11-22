@@ -17,10 +17,10 @@ class School extends \Model\Base{
 	public function selectSchoolComment($data) {
     	$result='';
 		
-		$where[]="WHERE s.school_comment_state=1";
+		$where[]="WHERE c.school_comment_state=1";
 		if(!empty($data)){
 			if(!empty($data['school_id'])){
-				$where[]="s.school_id=".$data['school_id'];
+				$where[]="c.school_id=".$data['school_id'];
 			}
 		}
 		
@@ -77,7 +77,7 @@ class School extends \Model\Base{
 		
 		$where=implode(' AND ', $where);
 		
-		$sql = "SELECT c.satisfy_name,s.school_name,s.school_option,AVG(s.school_score)*10 AS score,COUNT(s.memberid) AS membernum	
+		$sql = "SELECT c.satisfy_name,c.satisfy_id,s.school_name,s.school_option,AVG(s.school_score)*10 AS score,COUNT(s.memberid) AS membernum	
 				FROM crm_school s  LEFT JOIN crm_satisfy c ON s.school_option=c.satisfy_id
 				{$where} GROUP BY s.school_option ORDER BY s.school_option";
 		//echo $sql;exit;

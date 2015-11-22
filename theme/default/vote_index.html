@@ -36,9 +36,12 @@
 		  泡桐树小学
 	   </div>
 	   <div class="panel-body">
+		{-if $res_school-}
+		{-foreach from=$res_school item=school-}
+		{-assign var=satisfy_id value=$school.satisfy_id-}
 		 <ul id="star" class="list-group">
 		 <li class="list-group-item">
-			<strong>我的评分</strong>
+			<strong>{-$school.satisfy_name-}</strong>
 			<div>
 			<input name="1" type="button" />
 			<input name="2" type="button" />
@@ -50,23 +53,15 @@
 			<input name="8" type="button" />
 			<input name="9" type="button" />
 			<input name="10" type="button" />
-			<span id="starValue"><b><font size="5" color="#fd7d28">0</font></b>分</span></li>
-		<li class="list-group-item">
-			<strong>我的评分</strong>
-			<div>
-			<input name="1" type="button" />
-			<input name="2" type="button" />
-			<input name="3" type="button" />
-			<input name="4" type="button" />
-			<input name="5" type="button" />
-			<input name="6" type="button" />
-			<input name="7" type="button" />
-			<input name="8" type="button" />
-			<input name="9" type="button" />
-			<input name="10" type="button" />
-			<span id="starValue"><b><font size="5" color="#fd7d28">0</font></b>分</span></li>
+			<span id="starValue"><b><font size="5" color="#fd7d28">0</font></b>分</span>
 			</div>
+		</li>
 		</ul>
+		{-/foreach-}
+		{-/if-}
+		
+		</div>
+		
 	   </div>
 	</div>
 </div>	
