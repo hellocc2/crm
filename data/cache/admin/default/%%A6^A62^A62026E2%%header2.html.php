@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-16 21:10:07
+<?php /* Smarty version 2.6.18, created on 2015-11-24 15:35:26
          compiled from header2.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'html_headnav', 'header2.html', 14, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'html_headnav', 'header2.html', 19, false),)), $this); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +16,12 @@ css/story.css?r=<?php echo $this->_tpl_vars['REVISION']; ?>
 " /> 
 </head>
 <body>
+<script>
+root_url="<?php echo $this->_tpl_vars['root_url']; ?>
+";
+memberid=434322;
+
+</script>
 <div class="body" style="background-color:#f6f4f0">
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
   <?php echo smarty_function_html_headnav(array(), $this);?>

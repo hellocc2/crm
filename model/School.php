@@ -12,6 +12,31 @@ class School extends \Model\Base{
 	}
 	
 	/**
+	 * 插入学校投票分数
+	 */ 
+	public function insertSchoolScore($data){
+		$output=false;
+		if(!empty($data['school_id'])){
+			$school_id=$data['school_id'];
+			$memberid=$data['memberid'];
+			$school_satisfy=$data['school_satisfy'];
+			$school_score=$data['school_score'];
+			$gmt_create=time();
+			
+			$sql = "INSERT INTO `crm_school_vote`(`area_id`,`school_id`,`school_satisfy`,`school_score`,`memberid`,`gmt_create`)
+			VALUES ('2','{$school_id}','{$school_satisfy}','{$school_score}','{$memberid}','{$gmt_create}')";
+			//echo $sql;exit;
+			$sth = $this->db->Prepare ( $sql );
+			$res = $this->db->Execute ( $sth );
+			if($res!==false){
+				$output=true;
+			}
+		}		
+		return $output;					
+	}
+	
+	
+	/**
 	 * 获取学校评论信息
 	 */  
 	public function selectSchoolComment($data) {
@@ -68,7 +93,7 @@ class School extends \Model\Base{
 	public function selectSchoolOption($data) {
     	$result='';
 		
-		$where[]="WHERE s.school_state=1";
+		$where[]="WHERE v.school_vote_state=1";
 		if(!empty($data)){
 			if(!empty($data['school_id'])){
 				$where[]="s.school_id=".$data['school_id'];
@@ -77,9 +102,11 @@ class School extends \Model\Base{
 		
 		$where=implode(' AND ', $where);
 		
-		$sql = "SELECT c.satisfy_id,c.satisfy_name,s.school_name,s.school_option,AVG(s.school_score)*10 AS score,COUNT(s.memberid) AS membernum	
-				FROM crm_school s  LEFT JOIN crm_satisfy c ON s.school_option=c.satisfy_id
-				{$where} GROUP BY s.school_option ORDER BY s.school_option";
+		$sql = "SELECT c.satisfy_id,c.satisfy_name,s.school_name,v.school_satisfy,AVG(v.school_score)*10 AS score,COUNT(v.memberid) AS membernum 	
+				FROM crm_school_vote v  
+				LEFT JOIN crm_satisfy c ON v.school_satisfy=c.satisfy_id 
+				LEFT JOIN crm_school s ON s.school_id=v.school_id 
+				{$where} GROUP BY v.school_satisfy ORDER BY v.school_satisfy";
 		//echo $sql;exit;
 		$query	= $this->db->Execute($sql);
 		
@@ -131,8 +158,8 @@ class School extends \Model\Base{
 		$where=implode(' AND ', $where);
 		
 		$sql = "SELECT   s.*,AVG(s.school_score)*10 AS score,COUNT(s.memberid) AS membernum	
-				FROM crm_school s  
-				{$where} GROUP BY s.school_name ORDER BY s.school_score";
+				FROM crm_school_vote s  
+				{$where} GROUP BY s.school_id ORDER BY s.school_score";
 		//echo $sql;exit;
 		$query	= $this->db->Execute($sql);
 		

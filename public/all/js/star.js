@@ -9,20 +9,11 @@
 		for(var Qi=0;Qi<this.name;Qi++){
 			GradList[Qi].style.backgroundPosition = 'left center';
 			
-		}
-		
-		for(var di=0;di<parseInt(document.getElementById(starval).getElementsByTagName("font")[0].innerHTML);di++){
-			GradList[di].style.backgroundPosition = 'left center';
-		}
+		}		
 		
 		star(GradList);
 	})
 
-	
-	 
-	
-	
-	
 	
 	function star(GradList){
 		for(var i=0;i < GradList.length;i++){
@@ -30,8 +21,23 @@
 			GradList[i].onclick = function(){
 				temp = this.name;
 				var starval=$(this).nextAll('span').attr('id');
-				document.getElementById(starval).innerHTML = '<b><font size="5" color="#fd7d28">'+this.name+'</font></b>分';
-				current(temp);
+				//评分
+				$.ajax({ 
+					cache:"false",
+					url: root_url+"index.php?module=ajax&action=star",
+					type: "get", 
+					data:"memberid=234441&school_id=1&school_satisfy=2&school_score=3",
+					success: function(data) {
+						data = $.parseJSON( data );
+						if(data.flag==1){
+							document.getElementById(starval).innerHTML = '<b><font size="5" color="#fd7d28">'+temp+'</font></b>分(评分成功)';
+							current(temp);
+						}else{
+							document.getElementById(starval).innerHTML = '<b><font size="5" color="#fd7d28">评分失败</font></b>';
+						}
+					}
+				}); 
+				//评分END
 			}
 			
 			//移出star
