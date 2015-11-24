@@ -8,7 +8,7 @@ class Index extends \Lib\common\Application {
 		$tpl = \Lib\common\Template::getSmarty ();
 		$id=R::getParams ('id');//1大学2专业...
 		$pid=R::getParams ('pid');//学校ID,专业ID...
-		
+		//echo '<pre/>';print_r(R::getParams ());exit;
 		switch($id){
 			case 1://大学
 				//获取打分
@@ -44,8 +44,8 @@ class Index extends \Lib\common\Application {
 		
 		
 		
-		$tpl->assign('id',$id);
-		$tpl->assign('pid',$pid);
+		$tpl->assign('catid',$id);
+		$tpl->assign('sid',$pid);
         $tpl->display ('vote_index.html');
         
 
