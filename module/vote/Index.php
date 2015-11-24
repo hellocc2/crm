@@ -24,9 +24,10 @@ class Index extends \Lib\common\Application {
 				$comdata['school_id']=$pid;
 				$comres=$school->selectSchoolComment($comdata);
 				
-				
+				//echo '<pre/>';print_r(json_encode($res_school['satisfy_id']));exit;
 				if(!empty($res_school['school'])){
 					$tpl->assign('res_school',$res_school['school']);
+					$tpl->assign('satisfy_id',json_encode($res_school['satisfy_id']));
 				}	
 			break;
 			case 2://专业

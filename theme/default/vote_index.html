@@ -36,9 +36,12 @@
 		  泡桐树小学
 	   </div>
 	   <div class="panel-body">
-		 <ul id="star" class="list-group">
-		 <li class="list-group-item">
-			<strong>我的评分</strong>
+		 <ul  class="list-group">
+		<!--{-if $res_school-}
+			{-foreach from=$res_school item=school-}
+			{-assign var=satisfy_id value=$school.satisfy_id-}
+			<li id="star{-$satisfy_id-}" class="list-group-item star">
+			<strong>{-$school.satisfy_name-}</strong>
 			<div>
 			<input name="1" type="button" />
 			<input name="2" type="button" />
@@ -50,22 +53,43 @@
 			<input name="8" type="button" />
 			<input name="9" type="button" />
 			<input name="10" type="button" />
-			<span id="starValue"><b><font size="5" color="#fd7d28">0</font></b>分</span></li>
-		<li class="list-group-item">
-			<strong>我的评分</strong>
-			<div>
-			<input name="1" type="button" />
-			<input name="2" type="button" />
-			<input name="3" type="button" />
-			<input name="4" type="button" />
-			<input name="5" type="button" />
-			<input name="6" type="button" />
-			<input name="7" type="button" />
-			<input name="8" type="button" />
-			<input name="9" type="button" />
-			<input name="10" type="button" />
-			<span id="starValue"><b><font size="5" color="#fd7d28">0</font></b>分</span></li>
+			<span id="starValue{-$satisfy_id-}"><b><font size="5" color="#fd7d28">0</font></b>分</span>
 			</div>
+		</li>
+		{-/foreach-}
+		{-/if-}-->
+			<li id="star1" label="1" class="list-group-item star">
+			<strong>testtest</strong>
+			<div>
+			<input name="1" type="button" class="inputstar"/>
+			<input name="2" type="button" class="inputstar"/>
+			<input name="3" type="button" class="inputstar"/>
+			<input name="4" type="button" class="inputstar"/>
+			<input name="5" type="button" class="inputstar"/>
+			<input name="6" type="button" class="inputstar"/>
+			<input name="7" type="button" class="inputstar"/>
+			<input name="8" type="button" class="inputstar"/>
+			<input name="9" type="button" class="inputstar"/>
+			<input name="10" type="button" class="inputstar"/>
+			<span id="starValue1"><b><font size="5" color="#fd7d28">0</font></b>分</span>
+			</div>
+		</li>
+		<li id="star2" class="list-group-item star">
+			<strong>testtest</strong>
+			<div>
+			<input name="1" type="button" class="inputstar"/>
+			<input name="2" type="button" class="inputstar"/>
+			<input name="3" type="button" class="inputstar"/>
+			<input name="4" type="button" class="inputstar"/>
+			<input name="5" type="button" class="inputstar"/>
+			<input name="6" type="button" class="inputstar"/>
+			<input name="7" type="button" class="inputstar"/>
+			<input name="8" type="button" class="inputstar"/>
+			<input name="9" type="button" class="inputstar"/>
+			<input name="10" type="button" class="inputstar"/>
+			<span id="starValue2"><b><font size="5" color="#fd7d28">0</font></b>分</span>
+			</div>
+		</li>
 		</ul>
 	   </div>
 	</div>
@@ -75,6 +99,9 @@
 </div>
 
 {-include file="footer.html"-}
+<script>
+satisfy_id={-$satisfy_id-};
+</script>
 <script src="{-$style_url-}/js/star.js?r={-$REVISION-}"></script>
 
 </html>
