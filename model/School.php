@@ -145,10 +145,10 @@ class School extends \Model\Base{
 	public function selectSchool($data) {
     	$result='';
 		
-		$where[]="WHERE s.school_state=1";
+		$where[]="WHERE s.school_vote_state=1";
 		if(!empty($data)){
-			if(!empty($data['school_option'])){
-				$where[]="s.school_option=".$data['school_option'];
+			if(!empty($data['school_satisfy'])){
+				$where[]="s.school_satisfy=".$data['school_satisfy'];
 			}
 			if(!empty($data['school_id'])){
 				$where[]="s.school_id=".$data['school_id'];

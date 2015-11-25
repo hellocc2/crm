@@ -30,7 +30,7 @@ class Index extends \Lib\common\Application {
 		//获取学校打分
 		$score=array();
 		//$score['area_id']=2;
-		$score['school_option']=$optionid;
+		$score['school_satisfy']=$optionid;
 		$school=new \Model\School();
 		$res_school=$school->selectSchool($score);
 		//echo '<pre/>';print_r($res_school);exit;
