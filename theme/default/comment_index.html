@@ -46,10 +46,12 @@
 	
 	<div class="col-md-4">
 		<div class="formline">
-		<form action="?module=comment&action=add">
+		<form action='{-rewrite url="?module=comment&action=Add"-}' method="post">
+		<input type="hidden" value="{-$id-}" name="commentid"/>
+		<input type="hidden" value="{-$sid-}" name="commentcat"/>
 		  <div class="form-group">
-			<label for="comment">泡桐树小学</label>
-			<textarea class="form-control" rows="20" id="comment"></textarea>
+			<label for="comment">{-$comment.0.school_name-}</label>
+			<textarea name="comcont" class="form-control" rows="20" id="comment"></textarea>
 		  </div>
 		   <div class="form-group">
 			<label for="yzm">输入验证码:</label>

@@ -6,9 +6,8 @@ use Helper\CheckLogin as CheckLogin;
 class Index extends \Lib\common\Application {
 	public function __construct() {
 		$tpl = \Lib\common\Template::getSmarty ();
-        $db = \Lib\common\Db::get_db();
-		$id=R::getParams ('sid');//类别ID:1学校2专业
-		$school_id=R::getParams ('sid');//学校ID
+       	$id=R::getParams ('id');//类别ID:1学校2专业
+		$sid=R::getParams ('sid');//学校|专业对应ID
 		
 		
 		
@@ -32,7 +31,9 @@ class Index extends \Lib\common\Application {
 			
 			break;
 		}
-	
+		
+		$tpl->assign('id',$id);
+		$tpl->assign('sid',$sid);
         $tpl->display ('comment_index.html');
         
 

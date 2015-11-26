@@ -12,6 +12,31 @@ class Comment extends \Model\Base{
 	}
 	
 	/**
+	 * 插入学校评论
+	 */ 
+	public function insertSchoolComment($data){
+		$output=false;
+		if(!empty($data['school_id'])){
+			$school_id=$data['school_id'];
+			$memberid=$data['memberid'];
+			$school_comment=$data['school_comment'];
+			$school_score=$data['school_score'];
+			$gmt_create=time();
+			
+			$sql = "INSERT INTO `crm_school_comment`(`area_id`,`school_id`,`memberid`,`school_comment`,`gmt_create`)
+			VALUES ('2','{$school_id}','{$memberid}','{$school_comment}','{$gmt_create}')";
+			//echo $sql;exit;
+			$sth = $this->db->Prepare ( $sql );
+			$res = $this->db->Execute ( $sth );
+			if($res!==false){
+				$output=true;
+			}
+		}		
+		return $output;					
+	}
+	
+	
+	/**
 	 * 选择评论内容
 	 */ 
 	public function selectSchoolComment($data){
@@ -26,8 +51,10 @@ class Comment extends \Model\Base{
 		
 		$where=implode(' AND ', $where);
 		
-		$sql = "SELECT c.memberid,c.school_comment AS comcont,m.nickname,m.member_pic	
-				FROM crm_school_comment c LEFT JOIN crm_member m ON c.memberid=m.memberid
+		$sql = "SELECT c.memberid,s.school_name,c.school_comment AS comcont,m.nickname,m.member_pic	
+				FROM crm_school_comment c 
+				LEFT JOIN crm_member m ON c.memberid=m.memberid
+				LEFT JOIN crm_school s ON s.school_id=c.school_id
 				{$where}";
 		//echo $sql;exit;
 		$query	= $this->db->Execute($sql);

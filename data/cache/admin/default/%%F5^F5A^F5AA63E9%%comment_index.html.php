@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-25 11:55:42
+<?php /* Smarty version 2.6.18, created on 2015-11-26 11:32:09
          compiled from comment_index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'math', 'comment_index.html', 58, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'rewrite', 'comment_index.html', 49, false),array('function', 'math', 'comment_index.html', 60, false),)), $this); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "header2.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -58,10 +58,16 @@ unset($_smarty_tpl_vars);
 	
 	<div class="col-md-4">
 		<div class="formline">
-		<form action="?module=comment&action=add">
+		<form action='<?php echo smarty_function_rewrite(array('url' => "?module=comment&action=Add"), $this);?>
+' method="post">
+		<input type="hidden" value="<?php echo $this->_tpl_vars['id']; ?>
+" name="commentid"/>
+		<input type="hidden" value="<?php echo $this->_tpl_vars['sid']; ?>
+" name="commentcat"/>
 		  <div class="form-group">
-			<label for="comment">泡桐树小学</label>
-			<textarea class="form-control" rows="20" id="comment"></textarea>
+			<label for="comment"><?php echo $this->_tpl_vars['comment']['0']['school_name']; ?>
+</label>
+			<textarea name="comcont" class="form-control" rows="20" id="comment"></textarea>
 		  </div>
 		   <div class="form-group">
 			<label for="yzm">输入验证码:</label>
