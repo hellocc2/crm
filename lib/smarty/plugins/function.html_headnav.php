@@ -21,7 +21,7 @@ function smarty_function_html_headnav($params, &$smarty)
 	  
 	if(!empty($res_nav['nav'])){
 		foreach($res_nav['nav'] as $nav){
-				$url=rew::rewrite(array('url'=>'?module=catgory&action=index&id='.$nav['nav_cateid'],'isxs'=>'no'));
+				$url=rew::rewrite(array('url'=>'?module=category&action=index&id='.$nav['nav_cateid'],'isxs'=>'no'));
 				$html.='<li><a href='.$url.'>'.$nav['nav_name'].'</a></li>';
 			
 		}

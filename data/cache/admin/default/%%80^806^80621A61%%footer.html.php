@@ -1,6 +1,6 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-27 15:05:30
+<?php /* Smarty version 2.6.18, created on 2015-11-27 16:39:15
          compiled from footer.html */ ?>
-<div class="foot">
+<div class="foot" id="foot">
 <div class="container "> 
 <div class="row"> 
 <div class="col-md-4">
