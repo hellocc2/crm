@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-16 20:49:55
+<?php /* Smarty version 2.6.18, created on 2015-11-27 15:05:30
          compiled from footer.html */ ?>
 <div class="foot">
 <div class="container "> 
@@ -27,6 +27,8 @@
 js/jquery.min.js"></script>
 <script src="<?php echo $this->_tpl_vars['style_url']; ?>
 js/bootstrap.min.js"></script>
+<script src="<?php echo $this->_tpl_vars['style_url']; ?>
+js/jquery-form.min.js"></script>
 <script type="text/javascript">
    $(function () { 
       $('.collapse').on('show.bs.collapse', function () {

@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-26 11:32:09
+<?php /* Smarty version 2.6.18, created on 2015-11-27 15:56:16
          compiled from comment_index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'rewrite', 'comment_index.html', 49, false),array('function', 'math', 'comment_index.html', 60, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'rewrite', 'comment_index.html', 50, false),array('function', 'math', 'comment_index.html', 61, false),)), $this); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "header2.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -9,6 +9,7 @@ unset($_smarty_tpl_vars);
  ?>
 
 <div class="container">
+
   <div class="row">
     
     <div class="col-md-8"> 
@@ -59,7 +60,7 @@ unset($_smarty_tpl_vars);
 	<div class="col-md-4">
 		<div class="formline">
 		<form action='<?php echo smarty_function_rewrite(array('url' => "?module=comment&action=Add"), $this);?>
-' method="post">
+' method="post" id="comform">
 		<input type="hidden" value="<?php echo $this->_tpl_vars['id']; ?>
 " name="commentid"/>
 		<input type="hidden" value="<?php echo $this->_tpl_vars['sid']; ?>
@@ -77,10 +78,25 @@ unset($_smarty_tpl_vars);
 " style="border:1px solid #e4eef9;height: 30px;" align="absmiddle" alt="换一张">
 			</a>
 		  </div>
-		   <button type="submit" class="btn btn-default">发表言论</button>
+		  <button type="submit" class="btn btn-default btn-add ">发表言论</button>
 		</form>
 		</div>
 	</div><!--/col-4-->
+	
+	<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">评论提交</h4>
+      </div>
+      <div class="modal-body">
+        成功!
+      </div>
+     </div>
+  </div>
+</div>
 	
   </div>
 </div>
@@ -95,5 +111,28 @@ function changeimg(act)
 {
 	$('#vfcode'+act).attr('src','v2.crm.com/auth/captcha/?act='+ act + '&' + Math.random());
 }
+
+$(function(){
+	$('#comform').submit(function(event) {
+		event.preventDefault();
+		$('#comform').ajaxSubmit({
+			url: $('#comform').attr("action"),
+			type: 'post',
+			dataType: 'json',
+			success: function(res){
+				if (res.flag==1) {
+					$('.modal-body').html("成功");
+					$('#myModal').modal('show');
+				}else{
+					$('.modal-body').html("失败");
+					$('#myModal').modal('show');
+				}
+			}
+		});
+		
+	});
+})
+
+
 </script>
 </html>

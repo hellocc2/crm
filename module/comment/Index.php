@@ -9,14 +9,10 @@ class Index extends \Lib\common\Application {
        	$id=R::getParams ('id');//类别ID:1学校2专业
 		$sid=R::getParams ('sid');//学校|专业对应ID
 		
-		
-		
-		
-		
 		switch($id){
 			case 1:
 				$data=array();
-				$data['school_id']=$school_id;
+				$data['school_id']=$sid;
 				
 				
 				//查找评论

@@ -1,13 +1,15 @@
 <?php
-namespace Module\Comment;
-use Helper\RequestUtil as R;
-use Helper\CheckLogin as CheckLogin;
-
-class Add extends \Lib\common\Application {
-	public function __construct() {
-	 	$verifycode=strtolower(R::getParams ('verifycode'));//验证码
+namespace Module\Ajax;
+use \helper\RequestUtil as R;
+/**
+ * 添加评论
+ * @sinc 2015-11-27
+ */
+class comment extends \Lib\common\Application{
+    public function __construct(){
+		$verifycode=strtolower(R::getParams ('verifycode'));//验证码
 		$comcont=R::getParams ('comcont');//评论内容
-		$memberid=23244;
+		$memberid=343421;
 		$id=R::getParams ('commentid');//评论ID(类别具体ID)
 		$cid=R::getParams ('commentcat');//评论类别(学校/专业/职称)
 		
@@ -26,6 +28,8 @@ class Add extends \Lib\common\Application {
 				$res=$comm->insertSchoolComment($data);
 				
 			break;
+			
+			
 		}
 		
 		if($res){
@@ -36,5 +40,6 @@ class Add extends \Lib\common\Application {
 		
 		echo json_encode($result);
 		exit;
-	}
+		
+    }
 }
