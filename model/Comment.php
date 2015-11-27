@@ -20,6 +20,7 @@ class Comment extends \Model\Base{
 			$school_id=$data['school_id'];
 			$memberid=$data['memberid'];
 			$school_comment=$data['school_comment'];
+
 			$gmt_create=time();
 			
 			$sql = "INSERT INTO `crm_school_comment`(`area_id`,`school_id`,`memberid`,`school_comment`,`gmt_create`)

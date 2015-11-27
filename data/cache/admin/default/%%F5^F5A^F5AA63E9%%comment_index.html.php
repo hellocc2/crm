@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2015-11-27 15:56:16
+<?php /* Smarty version 2.6.18, created on 2015-11-27 16:21:50
          compiled from comment_index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'rewrite', 'comment_index.html', 50, false),array('function', 'math', 'comment_index.html', 61, false),)), $this); ?>
@@ -121,10 +121,10 @@ $(function(){
 			dataType: 'json',
 			success: function(res){
 				if (res.flag==1) {
-					$('.modal-body').html("成功");
+					$('.modal-body').html("成功！");
 					$('#myModal').modal('show');
 				}else{
-					$('.modal-body').html("失败");
+					$('.modal-body').html("失败！");
 					$('#myModal').modal('show');
 				}
 			}
