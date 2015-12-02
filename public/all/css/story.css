@@ -6,6 +6,7 @@
   color: #ccc;
   text-align: center;
   background-color:#DDDDDD;
+  height:50px;position:fixed;bottom:0px;left:0px;
 }
 
 .navbar-form input, .form-inline input {

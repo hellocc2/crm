@@ -27,20 +27,18 @@ function smarty_function_html_headnav($params, &$smarty)
 		}
 	}
 
+	$html.='</ul>';
+	$login=rew::rewrite(array('url'=>'?module=member&action=login','isxs'=>'no'));
+	$reg=rew::rewrite(array('url'=>'?module=member&action=reg','isxs'=>'no'));
 	$html.='
-      </ul>
       <ul class="nav navbar-right navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
-          <ul class="dropdown-menu" style="padding:12px;">
-            <form class="form-inline">
-              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
-            </form>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>';
+        <a href="'.$login.'">登录</a>|<a href="'.$reg.'">注册</a>
+      </ul>';
+	$html.='</nav>';
+
+	$html.='</div>';
+  
+
 	return $html;
 
 }
