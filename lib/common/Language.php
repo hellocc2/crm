@@ -74,7 +74,7 @@ class Language{
             	$SELLER_LANG = $_GET['lang'];
             }
 
-    		if (!defined('SELLER_LANG')) define('SELLER_LANG', $SELLER_LANG);
+    		if (!defined('SELLER_LANG')) define('SELLER_LANG', 'zh-cn');
     		if (!defined('LangDirName'))
     		{
     			/**

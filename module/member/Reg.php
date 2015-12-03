@@ -1,6 +1,7 @@
 <?php
 namespace Module\Member;
 use Helper\RequestUtil as R;
+use Helper\ResponseUtil as rew;
 
 class Reg extends \Lib\common\Application {
 	public function __construct() {
@@ -25,8 +26,10 @@ class Reg extends \Lib\common\Application {
 			
 			$mem = new \Model\Member();
 			$res=$mem->memberReg($reg_array);
+			//echo '<pre/>';var_dump($res);exit;
 			if($res){
-				\helper\Js::alertForward('成功');	
+				$url=rew::rewrite(array('url'=>'?module=member&action=index','isxs'=>'no'));
+				\helper\Js::alertForward('成功',$url);	
 			}else{
 				\helper\Js::alertForward('失败');
 			}
