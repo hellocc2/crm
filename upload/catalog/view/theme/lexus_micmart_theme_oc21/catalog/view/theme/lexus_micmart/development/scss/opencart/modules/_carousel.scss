@@ -1,0 +1,25 @@
+// pav carousel
+.#{$app-brand-prefix}carousel {
+    overflow: hidden;
+    background: transparent;
+    .item-inner{
+        &:hover {            
+            img {
+                @extend .grayscale-color;
+            }
+        }
+        img {
+            @extend .grayscale-gray;  
+        } 
+    }
+    &:hover {
+        .carousel-control {
+           &.left{
+               left: 10px;
+            }   
+            &.right{
+                right: 10px;
+            } 
+        }
+    }
+}

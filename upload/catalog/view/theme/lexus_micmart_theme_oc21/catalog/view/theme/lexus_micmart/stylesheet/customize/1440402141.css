@@ -1,0 +1,16 @@
+
+/* customize for body,body .home1 */ 
+body,body .home1 { 
+font-family:inherit 
+} 
+
+/* customize for #header-layout .header-top */ 
+#header-layout .header-top { 
+background-color:#9e4c4c;
+background-image:url(../../image/pattern/pattern10.png) 
+} 
+
+/* customize for #header-layout .header-top span,#header-layout .header-top */ 
+#header-layout .header-top span,#header-layout .header-top { 
+color:#76f536 
+} 

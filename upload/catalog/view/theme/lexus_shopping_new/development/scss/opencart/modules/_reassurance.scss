@@ -1,0 +1,71 @@
+/*quickaccess*/
+.box-module-pavreassurances {
+    p{
+        margin: 0;
+    }
+     h4{
+        font-size: $font-size-base;
+        color: $white;
+        line-height: 20px;
+        margin: 0px;
+        font-family: $font-family-base;
+        max-width:75%;
+    }
+    .column{
+        position: relative;
+        cursor: pointer;
+        &:after{
+            content: "";
+            @include size(20px,5px);
+            background-color: rgba(255,255,255,0.2);
+            position: absolute;
+            top: 50%;
+            @include rtl-left(-32px);
+        }
+        &:first-child{
+            &:after{
+                content: none;
+            }
+        }
+    }
+    .description{
+        overflow: hidden;
+        color: $text-color;
+        font-size: $font-size-base - 2;
+    }  
+    .icon-name{
+        font-size: 30px;
+        line-height: 38px;
+        color: $theme-color;
+        @include rtl-float-left();
+        display: inline-block;
+        @include rtl-margin-right(10px);
+    } 
+    .button{
+        position: absolute;
+        @include rtl-right(8px);
+        background-color:transparent;
+        border:none;
+        padding: 0 5px;
+        font-size: $font-size-base + 1;
+        color: $white;
+    }
+}
+
+.reassurances-center 
+.modal-dialog h4,.modal-dialog .icon-name{
+    color: #000;
+}
+.box-module-pavreassurances .column .button{
+    display: none;
+}
+.box-module-pavreassurances .column:hover .button{
+    display: block;
+}
+.modal-dialog{
+    .modal-header{
+        h4{
+            color: $black;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+#topbar{
+	border-bottom:4px solid #eee;
+}
+.autosearch-wrapper .input-group{
+	border-color:#e5e5e5;
+}
+#cart .wrap-cart{
+	color:#000;
+}
+.pav-megamenu .navbar-nav{
+	> li{
+		> a{
+			font-size: 13px;
+			color: #414141;
+		}
+	}
+}
+.header-bottom{
+	@include box-shadow(0 1px 1px rgba(0, 0, 0, 0.13));
+}
+.bg-default{
+	background-color:$green;
+}

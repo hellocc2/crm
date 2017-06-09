@@ -1,0 +1,31 @@
+#topbar{
+	border-bottom:4px solid #eee;
+}
+.autosearch-wrapper .input-group{
+	border-color:#e5e5e5;
+}
+#cart .wrap-cart{
+	color:#999;
+}
+.pav-megamenu{
+	.navbar-collapse{
+		padding:0;
+	}
+	.navbar-nav{
+		> li{
+			> a{
+				font-size: 13px;
+			}
+		}
+	}
+}
+#header-layout .header-bottom{
+	background-color:$blue;
+}
+#header-layout{
+	&.header-v1{
+		.header-top{
+			background-color:transparent;
+		}	
+	}
+}

@@ -1,0 +1,101 @@
+body .owl-carousel {
+    background: transparent;
+    @include box-shadow(none);
+}
+
+// Module fitter
+.filter {
+    .list-group{
+        border-top:1px dotted $pagination-border;
+    }
+    .panel-body{
+        padding:0 20px;
+    }
+    h6{
+        margin-bottom: 0;
+        color: $theme-color-default;
+        font-size: $font-size-base + 1;
+    }
+    .list-group-item{
+        padding:5px 0;
+        border:none;
+    }
+}
+
+/* search */
+
+// module cart
+#cart {
+    margin-top: 10px;
+    &:hover,
+    &:focus {
+        > .dropdown-menu {
+            @include opacity(1);
+            visibility: visible;
+            display: block;
+            top:100%;
+        }
+    } 
+    a{
+        position:relative;
+    }
+    .icon-cart {
+        background: url("#{$image-theme-path}icon_cart.png") no-repeat left center;
+        @include size(24px,29px);
+        display: inline-block;
+    }
+    .wrap-cart{
+        display: inline-block;
+        @include rtl-padding-left(10px);
+        @include rtl-text-align-left();
+        color: $white;
+        font-size: $font-size-base - 2;
+        .text-cart{
+            color: $theme-color;
+            margin: 0;
+            font-size: $font-size-base + 1;
+        }
+    }
+    .dropdown-menu{
+        min-width: 470px;
+        @include rtl-left(auto);
+        @include rtl-right(0);
+        left: auto;
+        padding:0;
+        top:120%;
+        @include opacity(0);  
+        @include transition(all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s);
+        display: block;
+        position:absolute;
+        visibility: hidden;
+        li{
+            padding:5px;
+            &:first-child{
+                .table td{
+                    padding:10px 3px;
+                }
+            }
+        }
+    }
+}
+/* bestseller */
+.bestseller{
+    &.panel-warning{
+        .products-block{
+            border:2px solid $brand-warning;
+            border-top:none;
+        }
+    }
+}
+.category{
+    border:1px solid $border-color;
+    &.panel{
+        .panel-heading{
+            @include rtl-padding-left(50px);
+            position:relative;
+            .panel-title{
+                color: $white;
+            }
+        }
+    }
+}

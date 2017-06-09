@@ -1,0 +1,134 @@
+
+/* customize for body,body .home1 */ 
+body,body .home1 { 
+background-color:#ff12ff;
+font-family:Tahoma, Geneva, sans-serif 
+} 
+
+/* customize for #topbar */ 
+#topbar { 
+background-color:#fa93fa;
+background-image:url(../../image/pattern/pattern11.png);
+color:#de4242 
+} 
+
+/* customize for #topbar a */ 
+#topbar a { 
+color:#29fc6b 
+} 
+
+/* customize for #header-layout .header-top */ 
+#header-layout .header-top { 
+background-color:#1c19e3;
+background-image:url(../../image/pattern/pattern10.png) 
+} 
+
+/* customize for #header-layout .header-top span,#header-layout .header-top */ 
+#header-layout .header-top span,#header-layout .header-top { 
+color:#3ae88b 
+} 
+
+/* customize for .pav-mainnav */ 
+.pav-mainnav { 
+background-color:#ad4cad 
+} 
+
+/* customize for #pav-mainnav */ 
+#pav-mainnav { 
+background-image:url(../../image/pattern/pattern10.png) 
+} 
+
+/* customize for .pav-mainnav  a,.pav-megamenu .navbar-nav li a */ 
+.pav-mainnav  a,.pav-megamenu .navbar-nav li a { 
+color:#1b29f2 
+} 
+
+/* customize for .pav-mainnav .dropdown-menu */ 
+.pav-mainnav .dropdown-menu { 
+background-color:#fc5bfc 
+} 
+
+/* customize for #pav-mainnav .dropdown-menu */ 
+#pav-mainnav .dropdown-menu { 
+background-image:url(../../image/pattern/pattern10.png) 
+} 
+
+/* customize for .pav-mainnav .widget-heading, #pav-mainnav .dropdown-menu */ 
+.pav-mainnav .widget-heading, #pav-mainnav .dropdown-menu { 
+color:#3917e6 
+} 
+
+/* customize for .pav-mainnav .dropdown-menu a,.pav-mainnav .dropdown-menu li a */ 
+.pav-mainnav .dropdown-menu a,.pav-mainnav .dropdown-menu li a { 
+color:#1cfc7d 
+} 
+
+/* customize for .footer-top */ 
+.footer-top { 
+background-color:#f551f5;
+background-image:url(../../image/pattern/pattern10.png) 
+} 
+
+/* customize for #footer .footer-top .panel-title,.footer-top .container  */ 
+#footer .footer-top .panel-title,.footer-top .container  { 
+color:#1fff23 
+} 
+
+/* customize for .footer-top a,#footer ul li a, #footer ol li a */ 
+.footer-top a,#footer ul li a, #footer ol li a { 
+color:#4319ff 
+} 
+
+/* customize for .footer-center */ 
+.footer-center { 
+background-color:#736ffc;
+background-image:url(../../image/pattern/pattern12.png) 
+} 
+
+/* customize for #footer .footer-center .panel-title,.footer-center .container  */ 
+#footer .footer-center .panel-title,.footer-center .container  { 
+color:#c43dc4 
+} 
+
+/* customize for .footer-center .container a */ 
+.footer-center .container a { 
+color:#27e312 
+} 
+
+/* customize for #powered */ 
+#powered { 
+background-color:#d45dd4;
+background-image:url(../../image/pattern/pattern12.png) 
+} 
+
+/* customize for #powered .container .inside a */ 
+#powered .container .inside a { 
+color:#e35c3d 
+} 
+
+/* customize for .product-block .name a */ 
+.product-block .name a { 
+color:#d62fd6 
+} 
+
+/* customize for .price .price-new */ 
+.price .price-new { 
+color:#26ff38 
+} 
+
+/* customize for .price .price-old */ 
+.price .price-old { 
+color:#580aff 
+} 
+
+/* customize for .product-block .action button.btn,.product-block .action a */ 
+.product-block .action button.btn,.product-block .action a { 
+background-color:#f230f2;
+color:#4cff9a 
+} 
+
+/* customize for .cart button */ 
+.cart button { 
+background-color:#ed21ed;
+color:#fa96aa 
+} 

@@ -1,0 +1,24 @@
+.autosearch-wrapper .input-group{
+	border-color:#e5e5e5;
+}
+#cart .wrap-cart{
+	color:#393939;
+}
+.pav-megamenu{
+	.navbar-collapse{
+		padding:0;
+	}
+	.navbar-nav{
+		> li{
+			> a{
+				font-size: 13px;
+			}
+		}
+	}
+}
+#header-layout .header-bottom{
+	background-color:#393939;
+}
+.bg-default{
+	background-color:$red;
+}

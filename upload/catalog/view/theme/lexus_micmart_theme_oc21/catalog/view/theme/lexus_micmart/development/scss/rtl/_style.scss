@@ -1,0 +1,135 @@
+.rtl {
+	.zoomContainer .zoomWindow {
+	    right: 100% !important;
+	}
+	.verticalmenu .navbar-nav > li > a .menu-icon{
+		background-position:right 0 !important;
+	}
+	.verticalmenu .bg2 div.dropdown-menu{
+		background-position:-50px bottom;
+	}
+	.background-img-v1{
+		background-position:right 25px;
+	}
+	.background-img-v2{
+		background-position:right 17px;
+	}
+	.background-img-v3{
+		background-position:right 17px;
+	}
+	.background-img-v4{
+		background-position:right 17px;
+	}
+	.background-img-v5{
+		background-position:right 17px;
+	}
+	.background-img-v6{
+		background-position:right 17px;
+	}
+	.background-img-v7{
+		background-position:right 17px;
+	}
+	.background-img-v8{
+		background-position:right 17px;
+	}
+	.background-img-v9{
+		background-position: 238px center;
+	}
+	.background-img-v10{
+		background-position:right 25px;
+	}
+	.background-img-v11{
+		background-position:right 17px;
+	}
+	.background-img-v12{
+		background-position:right 13px;
+	}
+	.home4{
+        .background-img-v8{
+            background-position:right 17px;
+        }
+    }
+	.carousel-controls{
+		left: 60px;
+		right: auto;
+	}
+	.effect-carousel-v2{
+	    .carousel-controls-v1{
+	        .carousel-control{
+	            &.left{
+	                left:0;
+	            }  
+	            &.right{
+	                right:-63px;
+	            } 
+	        }       
+	    }
+	}    
+	.nav-tabs > li{
+		float: right;
+	}
+	.feature-box-v2 .fbox-icon{
+		margin-right: 0;
+		margin-left: 15px;
+	}
+	.space-left-20{
+		margin-left: 0 !important;
+		margin-right: 20px !important;
+	}
+	.pav-megamenu .navbar-nav > li{
+		 &.aligned-center{
+		 	.dropdown-menu{
+		 		transform: translate(50%);
+		 	}
+		}
+	}
+	div.at4-arrow{
+		text-align: right;
+	}
+	body { 
+	    .header-v1{
+	       .heading-vetical{
+	            .panel-heading {
+	                background-image:none;
+	            }
+	        }
+	    }
+	    .home2,.home3{
+	        .verticalmenu{
+	            .navbar-nav > li{
+
+	                a{
+	                    .caret{
+	                        @include rotate(-90deg);
+	                    }
+	                }
+	            }
+	        }
+	    }
+	}
+	.tab-v7 .nav-tabs > li > a::before{
+		right: -1px;
+		left: auto;
+	}
+	.addthis_default_style a{
+		float: right;
+	}
+
+}
+@media (max-width: $screen-phone){
+  .rtl .row-offcanvas-left.active{
+    right: 70%;
+    left: auto;
+  }
+  .rtl .row-offcanvas-left .sidebar-offcanvas{
+    right: -70%;
+    left: auto;
+  }
+  .rtl .sidebar-offcanvas{
+    width: 70%;
+  }
+  .rtl #offcanvasmenu iframe{
+    height: 150px !important;
+    width: 190px !important;
+  }
+}

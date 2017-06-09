@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<theme>
+	<social>
+		<title>Social Block</title>
+		<description></description>
+		<module>
+	 	 	<title>Social</title>
+	 	 	<field>
+	 	 		<name>social_id</name>
+	 	 		<label>Profile ID</label>
+	 	 		<type>text</type>
+	 	 		<lang>0</lang>
+	 	 		<default><![CDATA[ra-5350ac7b76c3e2f6]]></default>
+	 	 		<description><![CDATA[ Active setting: <a href="http://www.screencast.com/t/oOb4ddif">http://www.screencast.com/t/oOb4ddif</a>
+	 	 		<br>Profile-ID : <a href="http://www.screencast.com/t/uHSdR1S2H">http://www.screencast.com/t/uHSdR1S2H</a>]]></description>
+	 		</field>
+	 	</module>
+	</social>
+	<footer>
+		<title>Footer Bottom Block</title>
+		<description></description>
+	 	<module>
+	 	 	<title>Follow Us</title>
+	 	 	<field>
+	 	 		<name>widget_follow_us</name>
+	 	 		<label>Content</label>
+	 	 		<type>textarea</type>
+	 	 		<lang>1</lang>
+	 	 		<default><![CDATA[
+	 	 			<div class="panel">                      
+						<div class="panel-heading">     
+						<h6 class="panel-title">Follow Us</h6>
+						</div>
+						<div class="panel-body">     
+						<p>Lorem ipsum, libero et luctus molestie, turpis mi sagittis nisl, a scelerisque </p>
+						<ul class="list-inline space-top-20">
+						<li><a data-toggle="tooltip" data-placement="top" data-original-title="Twitter" href="#"><i class="icons radius-x icons-sm fa fa-twitter"></i></a></li>
+						<li><a data-toggle="tooltip" data-placement="top" data-original-title="Facebook" href="#"><i class="icons radius-x icons-sm fa fa-facebook"></i></a></li>
+						<li><a data-toggle="tooltip" data-placement="top" data-original-title="Google Plus" href="#"><i class="icons radius-x icons-sm fa fa-google-plus"></i></a></li>
+						<li><a data-toggle="tooltip" data-placement="top" data-original-title="Youtube" href="#"><i class="icons radius-x icons-sm fa fa-youtube"></i></a></li>
+						</ul>
+						</div>
+
+					</div>
+
+
+	 	 		]]></default>
+	 		</field>
+	 	</module>
+	 	<module>
+	 	 	<title>About Us</title>
+	 	 	<field>
+	 	 		<name>widget_about_us</name>
+	 	 		<label>Content</label>
+	 	 		<type>textarea</type>
+	 	 		<lang>1</lang>
+	 	 		<default><![CDATA[
+	 	 			
+					<div class="panel">                    
+					<div class="panel-heading">    
+					<h6 class="panel-title">about us</h6>
+					</div>
+					<div class="panel-body">       
+					  <ul class="list-unstyled address">
+					    <li>
+					      <i class="icon icon-user pull-left"></i>
+					      <span>PO Box 16122 Collins Street West Victoria 
+					      8007 Australia</span>
+					    </li>
+					    <li>
+					      <i class="icon icon-phone pull-left"></i>
+					      <span>+844 123 456 78</span>  
+					    </li>
+					    <li>
+					    <i class="icon icon-mail pull-left"></i>
+					    <a href="mailto:info@company.com">contac@yourcompany.com</a>
+					    </li>
+					  </ul>                       
+					</div>
+					</div>        
+	 	 		]]></default>
+	 		</field>
+	 	</module>	
+		<module>
+			<title>Popular Searches</title>
+			<field>
+			<name>widget_popular</name>
+			<label>Content</label>
+			<type>textarea</type>
+			<lang>1</lang>
+			<default>
+				<![CDATA[<div class="panel">
+				<div class="panel-heading"><h6 class="panel-title">Popular Searches</h6></div>
+				<div class="panel-body">
+				<ul class="list-unstyled">
+				<li><a href="#">Dyson</a></li>
+				<li><a href="#">Soundbar</a></li>
+				<li><a href="#">Samsung HU8500</a></li>
+				<li><a href="#">Sonos</a></li>
+				</ul>
+				</div>
+				</div>
+				]]>
+			</default>
+			</field>
+		</module>	
+
+		<module>
+			<title>Shop By Brands</title>
+			<field>
+			<name>widget_brands</name>
+			<label>Content</label>
+			<type>textarea</type>
+			<lang>1</lang>
+			<default>
+				<![CDATA[<div class="panel">
+				<div class="panel-heading"><h6 class="panel-title">Shop By Brands</h6></div>
+				<div class="panel-body">
+				<ul class="list-unstyled">
+				<li><a href="#">Bosch</a></li>
+				<li><a href="#">Dyson</a></li>
+				<li><a href="#">LG</a></li>
+				<li><a href="#">Panasonic</a></li>
+				</ul>
+				</div>
+				</div>
+				]]>
+			</default>
+			</field>
+		</module>	
+
+
+	 	<module>
+	 	 	<title>Papal</title>
+	 	 	<field>
+	 	 		<name>widget_papal</name>
+	 	 		<label>Content</label>
+	 	 		<type>textarea</type>
+	 	 		<lang>1</lang>
+	 	 		<default><![CDATA[
+	 	 			                 
+					    <img class="img-responsive" alt="papal" src="image/catalog/payment.png">                 
+					 
+	 	 		]]></default>
+	 		</field>
+	 	</module>
+	</footer>	
+</theme>
+

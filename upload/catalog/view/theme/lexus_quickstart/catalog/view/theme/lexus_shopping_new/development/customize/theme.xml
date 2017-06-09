@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<theme>
+	<header>
+		<title>Topbar Block</title>
+		<description></description>
+		<module>
+	 	 	<title>Support</title>
+	 	 	<field>
+	 	 		<name>widget_support</name>
+	 	 		<label>Content</label>
+	 	 		<type>textarea</type>
+	 	 		<lang>1</lang>
+	 	 		<default><![CDATA[
+	 	 			<div class="media">
+						<div class="pull-left">
+							<i class="fa fa-mobile"></i>
+						</div>
+						<div class="media-body">
+							<span>+844 123 456 78</span>
+							<h5>Support 24/7. Toll Free</h5>  
+						</div>
+					</div>
+	 	 		]]></default>
+	 		</field>
+	 	</module>
+	</header>
+	<footer>
+		<title>Footer Bottom Block</title>
+		<description></description>
+	 	<module>
+	 	 	<title>Logo</title>
+	 	 	<field>
+	 	 		<name>widget_logo</name>
+	 	 		<label>Content</label>
+	 	 		<type>textarea</type>
+	 	 		<lang>1</lang>
+	 	 		<default><![CDATA[
+	 	 			<div class="box-about bg-success">
+	 	 			<img alt="logo" src="image/catalog/logo-footer.png">	 	 			
+					<p class="space-top-10">	 	 				
+					Aenean solliin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibhultate cursus a sit amet mauris.
+					</p>
+					<p class="space-top-10">123456 street name, newyork, USA<br>+844 123 456 / + 844 123 456<br><a href="maito:contact@company.com"> contact@company.com </a></p>
+					<ul class="list-unstyled list-inline space-margin-tb-40 bo-social-icons">
+						<li><a href=""><span class="bo-social-outline radius-x"><i class="fa fa-facebook"></i></span><span>facebook</span></a></li>
+						<li><a href=""><span class="bo-social-outline radius-x"><i class="fa fa-twitter"></i></span><span>twitter</span></a></li>
+						<li><a href=""><span class="bo-social-outline radius-x"><i class="fa fa-google-plus"></i></span><span>google+</span></a></li>
+						<li><a href=""><span class="bo-social-outline radius-x"><i class="fa fa-linkedin"></i></span><span>linkedin</span></a></li>
+						<li><a href=""><span class="bo-social-outline radius-x"><i class="fa fa-weibo"></i></span><span>weibo</span></a></li>
+					</ul>
+					</div>
+
+
+	 	 		]]></default>
+	 		</field>
+	 	</module>
+
+	 	<module>
+	 	 	<title>Papal</title>
+	 	 	<field>
+	 	 		<name>widget_papal</name>
+	 	 		<label>Content</label>
+	 	 		<type>textarea</type>
+	 	 		<lang>1</lang>
+	 	 		<default><![CDATA[
+	 	 			<div class="panel pull-left">                 
+					  <div class="panel-heading">
+					    <h6 class="panel-title font-size-18">Payment method</h6>
+					  </div>
+					  <div class="panel-body">                   
+					    <img alt="papal" src="image/catalog/payment.png">                  
+					  </div>
+					</div>
+	 	 		]]></default>
+	 		</field>
+	 	</module>
+
+	 	<module>
+	 	 	<title>Contact</title>
+	 	 	<field>
+	 	 		<name>widget_callus</name>
+	 	 		<label>Content</label>
+	 	 		<type>textarea</type>
+	 	 		<lang>1</lang>
+	 	 		<default><![CDATA[
+	 	 			<div class="panel pull-right">                    
+						<div class="panel-heading">    
+						<h6 class="panel-title font-size-18">Feel free to call us</h6>
+						</div>
+						<div class="panel-body">       
+						<span class="red font-size-30">+844 123 456 78</span>                             
+						</div>
+					</div>
+	 	 		]]></default>
+	 		</field>
+	 	</module>	
+	</footer>	
+</theme>
+

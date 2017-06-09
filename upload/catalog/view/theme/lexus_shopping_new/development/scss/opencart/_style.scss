@@ -1,0 +1,121 @@
+.col-nopadding{
+	.row{
+		margin-left: 0;
+		margin-right: 0;
+		[class*="col-"]{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+.nopadding [class*="col-"], .nopadding [class^="col-"]{
+	padding-right:0;
+	padding-left:0;
+}
+.block-item1{
+	@include rtl-margin-right(-1px);
+}
+.col-lg-cus-5 {
+    @include rtl-float-left();
+    padding-left: 9px;
+    padding-right: 9px;
+    width: 20%;
+    position:relative;
+}
+
+.comment-warning {
+	color: red;
+}
+.list-arrow {
+	> li > a{
+		padding: 0 20px!important;
+	}
+}
+
+/* back top top */
+.scrollup {
+    background: $theme-color;
+    bottom: 82px;
+    display: none;
+    position: fixed;
+    @include rtl-right(10px);
+    @include rounded-corners(100%);   
+    @include size(40px,40px);
+	text-align: center;
+	font-size: 13px;
+	color: #fff!important;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-family: $font-family-secondary;
+	padding: 2px;
+	z-index: 9999;
+	.fa { display: block;}
+}
+.special-banner {
+    @include rtl-float-left();
+    width: 50%;
+}
+/* checkout */
+.style1{
+	.panel-title{
+		border:1px solid $border-color;
+		padding:10px;
+	}
+}
+.bg-top{
+	background-repeat:no-repeat;
+	background-position:top center;
+}
+/* support */
+
+.box-support{
+	text-align: center;
+	margin-top:10px;
+    > .media {
+        margin-top: 0;
+        display: inline-flex;
+        @include rtl-text-align-left;
+        .fa {
+          color: $theme-color;
+          font-size: 45px;
+        }
+        .media-body {
+          font-weight: 700;
+          font-size: $font-size-base + 4;
+          padding: 3px 0;
+          color: $black;
+          h5 {
+            font-size: $font-size-base - 2;
+            margin: 0 0 3px;
+            font-weight: 400;
+            color: $theme-color-tertiary;
+          }
+        }
+    }  
+}
+.box-about{
+	padding:35px 20px;
+	margin-top:-140px;
+	color:$white;
+	a{
+		color: $black;
+		text-decoration: underline;
+		&:hover{
+			color: $white;
+		}
+	}
+}
+.right {
+    @include rtl-float-right();
+}
+.line{
+	position:relative;
+	&:before{
+		background: #e6e6e6;
+	    bottom: 15px;
+	    content: "";
+	    position: absolute;
+	    @include size(1px,47px);
+	    right: 0;
+	}
+}

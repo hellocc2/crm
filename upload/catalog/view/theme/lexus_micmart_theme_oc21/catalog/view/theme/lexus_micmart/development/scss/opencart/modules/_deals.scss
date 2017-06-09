@@ -1,0 +1,154 @@
+.deals .product-filter{
+	background:transparent;
+	color:$text-color;
+}
+.productdeals {
+	.carousel-inner{
+		&:hover {
+		    overflow: inherit !important;
+		}
+	}
+	.product-grid .products-row{
+		.product-block .action > div{
+			padding-right:1px;
+		}
+	}
+	&-v1{
+		.product-v1{
+		    min-height: 611px;
+		    z-index: 10;
+		}
+		.item-countdown{
+			display: none;
+		}
+	}
+	&-v2{
+		.sidebar{
+			.product-meta{
+				padding:20px 0 0;
+			}
+		}
+		.item-countdown{
+			display: none;
+		}
+	}
+	&-v4{
+		.product-v2{
+			min-height: 435px;
+		}
+		.carousel-inner:hover{
+			overflow: hidden !important;
+		}
+		.item-countdown{
+			display: none;
+		}
+		.product-v4{
+			min-height: 452px;
+			.product-label{
+				display: none;
+			}
+		}
+	}
+	
+	
+	.product-v2{
+		min-height: 452px;
+		.product-block{
+			.block-img{
+				@include rtl-float-left();
+			}	
+			.description{
+				display: block;
+				padding:10px 0;
+			}
+			.product-meta{
+				padding:40px 20px;
+			}
+			.action{
+				display: none;
+			}
+			.price-new{
+				font-size: $font-size-base + 5;
+			}
+			.price-old{
+				font-size: $font-size-base + 1;
+			}
+		}
+	}
+	.item-countdown {
+		.countdown_num {
+			font-size: $font-size-base + 3;
+			font-weight: bold;
+			color: $white;
+			display: block;
+		}
+		ul {
+/* 			text-align: center; */
+			margin: 0;
+		}
+		li {
+			color: $white;
+			background:$theme-color-default;
+			font-size: $font-size-base - 1;
+			padding: 10px;
+			@include size(52px,53px);
+			text-align: center;
+			font-size: 12px;
+			margin: 0 4px 0 0;
+			line-height: 18px;
+			position:relative;
+			&:before{
+				@include size(0,0);
+				@include rtl-border-left(20px solid rgba(0, 0, 0, 0));
+			    border-top: 20px solid $gray-dark;
+			    content: "";
+			    position: absolute;
+			    @include rtl-right(0);
+			    top: 0;
+			}
+		}
+		&-v2{
+			.countdown_num {
+				font-size: $font-size-base - 2;
+				font-weight: bold;
+				color: $theme-color-default;
+			}
+
+			li{
+				border-top:2px solid $theme-color-default;
+				border-bottom:2px solid $theme-color-default;
+				position:relative;
+				line-height: 15px;
+				min-width: 40px;
+				min-height: 40px;
+				padding-top:3px;
+				text-align: center;
+				&:before{
+					position:absolute;
+					@include rtl-right(0);
+					@include size(1px,36px);
+					background:$border-color;
+					content: "";
+					top:0;
+				}
+				&:nth-child(2){
+					color: $theme-color;
+					.countdown_num{
+						color: $theme-color;
+					}
+				}
+				&:first-child{
+					@include rtl-border-left(2px solid $theme-color-default);
+				}
+				&:last-child{
+					@include rtl-border-right(2px solid $theme-color-default);
+					&:before{
+						content: none;
+					}
+				}
+				
+			} 
+		}
+	}
+	
+}

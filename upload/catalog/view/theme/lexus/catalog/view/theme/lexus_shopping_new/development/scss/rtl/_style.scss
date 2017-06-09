@@ -1,0 +1,110 @@
+.rtl {
+	.zoomContainer .zoomWindow {
+	    right: 100% !important;
+	}
+	.verticalmenu .navbar-nav > li > a .menu-icon{
+		background-position:right 0 !important;
+	}
+	.product-label.ribbon1 .product-label-special{
+		@include rotate(45deg);
+	}
+	.product-label.ribbon .product-label-special{
+		@include rotate(-45deg);	
+	}
+	.product-label.ribbon2 .product-label-special{
+		@include rotate(-45deg);
+	}
+	.carousel-controls{
+		left: 71px;
+		right: auto;
+	}
+	.testimonials-v2 .testimonials-avatar{
+		margin-left:15px;
+		margin-right: 0;
+	}
+	.newsletter-v4{
+	    .input-group{
+	        input{
+	          	@include border-left-radius(0);
+	            @include border-right-radius(50px);
+	        }
+	        button{
+	        	@include border-left-radius(50px);
+	        	@include border-right-radius(0);
+	        }
+	    }
+	}
+	.space-padding-l5 {
+	    padding-left: 0 !important;
+	    padding-right: 5px !important;
+	}
+	/* .fa-angle-right::before {
+	    content: "\f104";
+	} */
+	.product-info .quantity-adder .add-action {
+	    border-left: 1px solid #e1e1e1;
+	    border-right: none;
+	}
+	.addthis_default_style a {
+	    float: right !important;
+	}
+	.nav-tabs > li{
+		float: right;
+		&:before{
+			left: auto;
+			right: 20px;
+		}
+	}
+	.pav-megamenu .navbar-nav > li{
+		&.aligned-center{
+		 	.dropdown-menu{
+		 		transform: translate(50%);
+		 	}
+		}
+	}
+	.productdeals .item-countdown li{
+		border-left: 1px solid #e6e6e6;
+		border-right:none;
+	}
+	.autosearch-wrapper .dropdown-menu{
+		right: 172px !important;
+		left: auto !important;
+	}
+	.featured-category-v1 .image::before{
+		border-right:6px solid #fff;
+		border-left:none;
+	}
+	.tab-v2 > .nav-tabs > li.active::before{
+		border-right-color: $brand-success;
+		border-left-color:transparent;
+	}
+	.tab-v2 > .nav-tabs > li:before{
+		left: -11px;
+		right: auto;
+	}
+	#header-layout.header-v2,#header-layout.header-v3{
+		.btn-group .dropdown-menu{
+			left: 0;
+			right: auto;
+		}
+	}
+	
+	
+}
+@media (max-width: $screen-phone){
+  .rtl .row-offcanvas-left.active{
+    right: 70%;
+    left: auto;
+  }
+  .rtl .row-offcanvas-left .sidebar-offcanvas{
+    right: -70%;
+    left: auto;
+  }
+  .rtl .sidebar-offcanvas{
+    width: 70%;
+  }
+  .rtl #offcanvasmenu iframe{
+    height: 150px !important;
+    width: 190px !important;
+  }
+}

@@ -1,0 +1,35 @@
+// Panels
+
+@mixin panel-variant($border, $heading-text-color, $heading-bg-color, $heading-border) {
+  border-color: $border;
+
+  & > .panel-heading {
+   // color: $heading-text-color;
+   // background-color: $heading-bg-color;
+    //border-color: $heading-text-color;
+    position: relative;
+    &:after {
+      border: 6px solid rgba(0, 0, 0, 0);
+      content: "";
+      display: block;
+      height: 0;
+      left: 20px;
+      position: absolute;
+      top: 100%;
+      width: 0;
+      z-index: 10;
+    }
+    + .panel-collapse > .panel-body {
+      border-top-color: $border;
+    }
+    .badge {
+      color: $heading-bg-color;
+      background-color: $heading-text-color;
+    }
+  }
+  & > .panel-footer {
+    + .panel-collapse > .panel-body {
+      border-bottom-color: $border;
+    }
+  }
+}
